@@ -1,0 +1,83 @@
+body {
+  vertical-align: middle;
+  text-align: center;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+hr {
+  margin-top: 0;
+}
+
+header {
+  background-color: #007bff;
+  font-size: 20px;
+  padding: 10px;
+  padding-bottom: 36px;
+}
+
+.headerLogo {
+  width: 100px;
+  vertical-align: center;
+}
+
+header nav ul.leftNav {
+  float: left;
+  list-style: none;
+  margin-top: auto;
+  padding-inline-start: 0;
+}
+
+header nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: auto 20px auto 20px;
+}
+
+header nav ul.rightNav {
+  float: right;
+  list-style: none;
+  margin: auto;
+  padding-inline-start: 0;
+}
+
+header a {
+  -webkit-transition: all 0.25s ease-in;
+  -moz-transition: all 0.25s ease-in;
+  -o-transition: all 0.25s ease-in;
+  -ms-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in;
+  color: white;
+  text-decoration: none;
+}
+
+header a:hover {
+  color: #00f7ff;
+  text-decoration: underline;
+}
+
+input {
+  border-radius: 3px;
+  padding: 8px;
+  margin: 5px;
+}
+
+button {
+  font-size: 14px;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+a.signout-button:hover {
+  cursor: pointer;
+}
+

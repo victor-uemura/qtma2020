@@ -1,0 +1,56 @@
+<main className={classes.content}>
+                <div className={classes.appBarSpacer} />
+                <h1>Sample Dashboard</h1>
+                <Container maxWidth="lg" className={classes.container}>
+                <Grid container spacing={3}>
+                    {/* Chart */}
+                    <Grid item xs={12} md={8} lg={9}>
+                    <Paper className={fixedHeightPaper}>
+                        <Chart />
+                    </Paper>
+                    </Grid>
+                    {/* Recent Deposits */}
+                    <Grid item xs={12} md={4} lg={3}>
+                    <Paper className={fixedHeightPaper}>
+                        <Deposits />
+                    </Paper>
+                    </Grid>
+                    {/* Recent Orders */}
+                    <Grid item xs={12}>
+                    <Paper className={classes.paper}>
+                        <Orders />
+                    </Paper>
+                    </Grid>
+                </Grid>
+                <Box pt={4}>
+                    <Copyright />
+                </Box>
+                </Container>
+            </main>
+
+
+
+
+
+
+this is original header
+
+            <header>
+  <div>
+    <nav>
+        <ul class="leftNav">
+          <li>
+              <Link to={ROUTES.LANDING}><img class="headerLogo" src={QTMALogo}/></Link>
+          </li>
+        </ul>
+        <ul class="rightNav">
+          <li>
+            <Link to={ROUTES.LOGIN}>Login</Link>
+          </li>
+          <li>
+            <Link to={ROUTES.SIGNUP}>Sign Up</Link>
+          </li>
+        </ul>
+    </nav>
+  </div>
+</header>
