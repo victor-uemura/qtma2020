@@ -10,6 +10,7 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import "../Firebase/firebase";
 import useStyles from "../../styles/styles";
+import * as ROLES from "../../constants/roles";
 
 //When Authenticated
 const NavigationAuth = (props) => {
@@ -33,9 +34,29 @@ const NavigationAuth = (props) => {
           QTMA
         </Button>
 
+        {/* {!!authUser.roles[ROLES.ADMIN] && (
+          <Button
+            variant="outlined"
+            component={Link}
+            to={ROUTES.ADMIN}
+            className={classes.menuButton}
+          >
+            Admin
+          </Button>
+        )} */}
+
         <IconButton
           component={Link}
           to={ROUTES.PROFILE}
+          aria-label="show 17 new notifications"
+          className={classes.menuButton}
+        >
+          <AccountCircle />
+        </IconButton>
+
+        <IconButton
+          component={Link}
+          to={ROUTES.ACCOUNT}
           aria-label="show 17 new notifications"
           className={classes.menuButton}
         >
