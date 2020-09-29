@@ -99,9 +99,7 @@ class Firebase {
 
   users = () => this.db.collection("users");
 
-  message = (uid) => this.db.collection("messages").doc(uid);
-
-  messages = () => this.db.collection("messages");
+  postings = () => this.db.collection("postings");
 }
 
 export default Firebase;
