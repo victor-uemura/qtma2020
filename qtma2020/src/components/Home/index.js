@@ -32,6 +32,7 @@ import List from "@material-ui/core/List";
 import { mainListItems, secondaryListItems } from "./listItems";
 
 import "fontsource-roboto";
+import { CallMissedSharp } from "@material-ui/icons";
 
 const INITIAL_STATE = {
   postings: null,
@@ -52,20 +53,41 @@ class PostingsBase extends Component {
       .postings()
       .get()
       .then((snapshot) => {
-        console.log(snapshot);
+
+        const postings = []
+        snapshot.forEach( doc => {
+          const data = doc.data()
+          postings.push(data) //puts data into array
+        })
+        this.setState({ postings: postings })
+        //set state to array
+
+        //console.log(snapshot);
       })
       .catch((error) => console.log(error));
   };
 
   render() {
     return (
-      <Typography variant="body2" color="textSecondary" align="center">
-        {"Copyright © "}
-        <Link color="inherit" href="https://qtma.ca">
-          QTMA
-        </Link>{" "}
-        {new Date().getFullYear()}
-        {"."}
+      <Typography variant="body2" color="textPrimary" align="left">
+        <div>
+          {
+            this.state.postings &&
+            this.state.postings.map( postings => {
+              return(
+                <div>
+                  <h1>{postings.title}</h1>
+                  <p><b>Description:</b> {postings.description}</p>
+                  <p><b>Time Commitment:</b> {postings.commitment}</p>
+                  <p><b>Age Requirement:</b> {postings.age}</p>
+                  <p><b>How to Apply:</b> Click <Link href={postings.web_apply} 
+                  target="_blank">here</Link></p> 
+
+                </div>
+              )
+            })
+          }
+        </div>
       </Typography>
     );
   }
