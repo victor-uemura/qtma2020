@@ -1,105 +1,115 @@
-import app from "firebase/app";
-import firebase from "firebase";
-import "firebase/auth";
+import app from 'firebase/app';
+import firebase from 'firebase';
+import 'firebase/auth';
 
 const config = {
-  apiKey: "AIzaSyAIDEQxJbKMW2khU0ttLVaZ04TrU6vqCaM",
-  authDomain: "qtma2020.firebaseapp.com",
-  databaseURL: "https://qtma2020.firebaseio.com",
-  projectId: "qtma2020",
-  storageBucket: "qtma2020.appspot.com",
-  messagingSenderId: "107809599995",
-  appId: "1:107809599995:web:827f00396f098e60ec9b5e",
-  measurementId: "G-1TLTH2WVMK",
+	apiKey: 'AIzaSyAIDEQxJbKMW2khU0ttLVaZ04TrU6vqCaM',
+	authDomain: 'qtma2020.firebaseapp.com',
+	databaseURL: 'https://qtma2020.firebaseio.com',
+	projectId: 'qtma2020',
+	storageBucket: 'qtma2020.appspot.com',
+	messagingSenderId: '107809599995',
+	appId: '1:107809599995:web:827f00396f098e60ec9b5e',
+	measurementId: 'G-1TLTH2WVMK'
 };
 
 class Firebase {
-  constructor() {
-    app.initializeApp(config);
+	constructor() {
+		app.initializeApp(config);
 
-    this.fieldValue = app.firestore.FieldValue;
-    this.emailAuthProvider = app.auth.EmailAuthProvider;
-    this.auth = app.auth();
-    this.db = app.firestore();
+		this.fieldValue = app.firestore.FieldValue;
+		this.emailAuthProvider = app.auth.EmailAuthProvider;
+		this.auth = app.auth();
+		this.db = app.firestore();
 
-    this.googleProvider = new app.auth.GoogleAuthProvider();
-    this.facebookProvider = new app.auth.FacebookAuthProvider();
-    this.twitterProvider = new app.auth.TwitterAuthProvider();
-  }
+		this.googleProvider = new app.auth.GoogleAuthProvider();
+		this.facebookProvider = new app.auth.FacebookAuthProvider();
+		this.twitterProvider = new app.auth.TwitterAuthProvider();
+	}
 
-  emailSignUp = (email, password) =>
-    this.auth.createUserWithEmailAndPassword(email, password);
+	emailSignUp = (email, password) =>
+		this.auth.createUserWithEmailAndPassword(email, password);
 
-  emailSignIn = (email, password) =>
-    this.auth.signInWithEmailAndPassword(email, password);
+	emailSignIn = (email, password) =>
+		this.auth.signInWithEmailAndPassword(email, password);
 
-  signOut = () => this.auth.signOut();
+	signOut = () => this.auth.signOut();
 
-  resetPWD = (email) => this.auth.sendPasswordResetEmail(email);
+	resetPWD = (email) => this.auth.sendPasswordResetEmail(email);
 
-  updatePWD = (password) => this.auth.currentUser.updatePassword(password);
+	updatePWD = (password) => this.auth.currentUser.updatePassword(password);
 
-  addUser = (
-    firstName,
-    lastName,
-    email,
-    birthDate,
-    location,
-    education,
-    password
-  ) => {
-    const db = firebase.firestore();
-    db.settings({
-      timestampsInSnapshots: true,
-    });
-    const userRef = db.collection("users").add({
-      firstName,
-      lastName,
-      email,
-      birthDate,
-      location,
-      education,
-      password,
-    });
-  };
+	// Returns user document corresponding to email of current auth login
+	getCurrentUser = async () => {
+		const docRef = this.db
+			.collection('users')
+			.where('email', '==', 'contactbrandonye@gmail.com');
+		try {
+			const doc = await (await docRef.get()).docs[0];
 
-  doSendEmailVerification = () => this.auth.currentUser.sendEmailVerification();
+			if (doc.exists) {
+				return doc.data();
+			} else {
+				console.log('No such document!');
+			}
+		} catch (error) {
+			console.log('Error getting document:', error);
+		}
+	};
 
-  doSignInWithGoogle = () => this.auth.signInWithPopup(this.googleProvider);
+	addUser = (firstName, lastName, email, birthDate, location, education) => {
+		this.db.settings({
+			timestampsInSnapshots: true
+		});
+		const userRef = this.db.collection('users').add({
+			firstName,
+			lastName,
+			email,
+			birthDate,
+			location,
+			education
+		});
+	};
 
-  doSignInWithFacebook = () => this.auth.signInWithPopup(this.facebookProvider);
+	doSendEmailVerification = () =>
+		this.auth.currentUser.sendEmailVerification();
 
-  doSignInWithTwitter = () => this.auth.signInWithPopup(this.twitterProvider);
+	doSignInWithGoogle = () => this.auth.signInWithPopup(this.googleProvider);
 
-  onAuthUserListener = (next, fallback) =>
-    this.auth.onAuthStateChanged((authUser) => {
-      if (authUser) {
-        this.user(authUser.uid)
-          .get()
-          .then((snapshot) => {
-            const dbUser = snapshot.data();
+	doSignInWithFacebook = () =>
+		this.auth.signInWithPopup(this.facebookProvider);
 
-            // merge auth and db user
-            authUser = {
-              uid: authUser.uid,
-              email: authUser.email,
-              emailVerified: authUser.emailVerified,
-              providerData: authUser.providerData,
-              ...dbUser,
-            };
+	doSignInWithTwitter = () => this.auth.signInWithPopup(this.twitterProvider);
 
-            next(authUser);
-          });
-      } else {
-        fallback();
-      }
-    });
+	onAuthUserListener = (next, fallback) =>
+		this.auth.onAuthStateChanged((authUser) => {
+			if (authUser) {
+				this.user(authUser.uid)
+					.get()
+					.then((snapshot) => {
+						const dbUser = snapshot.data();
 
-  user = (uid) => this.db.doc(`users/${uid}`);
+						// merge auth and db user
+						authUser = {
+							uid: authUser.uid,
+							email: authUser.email,
+							emailVerified: authUser.emailVerified,
+							providerData: authUser.providerData,
+							...dbUser
+						};
 
-  users = () => this.db.collection("users");
+						next(authUser);
+					});
+			} else {
+				fallback();
+			}
+		});
 
-  postings = () => this.db.collection("postings");
+	user = (uid) => this.db.doc(`users/${uid}`);
+
+	users = () => this.db.collection('users');
+
+	postings = () => this.db.collection('postings');
 }
 
 export default Firebase;
