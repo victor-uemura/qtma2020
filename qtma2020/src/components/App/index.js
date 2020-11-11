@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import TagManager from "react-gtm-module";
 
 import Navigation from "../Navigation";
 import LandingPage from "../Landing";
@@ -13,6 +14,12 @@ import AccountPage from "../Account";
 
 import * as ROUTES from "../../constants/routes";
 import { withAuthentication } from "../Session";
+
+const tagManagerArgs = {
+  gtmId: "G-2S1KHF1PW7",
+};
+
+TagManager.initialize(tagManagerArgs);
 
 const App = () => (
   <Router>
