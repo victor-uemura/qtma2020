@@ -96,17 +96,91 @@ a.signout-button:hover {
 }
 
 .landing-body {
-  height: 3807px;
-  width: auto;
+  display: flex;
+  justify-content: flex-start;
+  height: 3800px;
+}
+
+.landing-top {
+  align-items: center; /* NEW */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-start;
+  padding-top: 220px;
+  height: 100%;
+  width: 100%;
+}
+
+.h-middle-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.74%;
+  margin-top: 166px;
+}
+
+.h-middle-box2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.74%;
+  margin-top: 211px;
+}
+
+.h-middle-box3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 11.9%;
+  width: 100%;
+  padding-top: 53px;
+}
+
+.v-middle-box {
+  align-items: center; /* NEW */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  justify-content: right;
+  width: 45%;
+}
+
+.v-middle-box2 {
+  align-items: flex-start; /* NEW */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: left;
+  width: 18.75%;
+  padding-left: 11.5%;
+}
+
+.image-3 {
+  height: 2.05%;
+  display: flex;
+  width: 100%;
+  padding-top: 122px;
+}
+
+.image-6 {
+  height: 5%;
+  display: flex;
+  width: 100%;
+  padding-top: 122px;
+  align-items: center;
+}
+
+.left-title {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
 }
 
 .landing-title1 {
-  position: absolute;
-  width: 60%;
-  height: 1.34%;
-  left: 20%;
-  top: 25%;
-
   font-family: Recoleta Alt;
   font-style: normal;
   font-weight: 500;
@@ -118,28 +192,22 @@ a.signout-button:hover {
 }
 
 .landing-title2 {
-  position: absolute;
-  width: 30.56%;
-  height: 2.86%;
-  left: 16.32%;
-  top: 185%;
-
+  width: 35%;
+  justify-content: flex-start;
   font-family: Recoleta Alt;
   font-style: normal;
   font-weight: 500;
   font-size: 48px;
   line-height: 65px;
   text-align: left;
+  padding-left: 16%;
+  margin-bottom: 0px;
 
   color: #ffffff;
 }
 
 .landing-title3 {
-  position: absolute;
-  width: 37%;
-  height: 3.28%;
-  left: 18%;
-  top: 300%;
+  width: 45%;
 
   font-family: Recoleta Alt;
   font-style: normal;
@@ -147,16 +215,13 @@ a.signout-button:hover {
   font-size: 46px;
   line-height: 65px;
   text-align: left;
+  padding-left: 9%;
 
   color: #000000;
 }
 
 .landing-title4 {
-  position: absolute;
   width: 40.56%;
-  height: 3.65%;
-  left: 29.72%;
-  top: 415%;
 
   font-family: Recoleta Alt;
   font-style: normal;
@@ -169,11 +234,7 @@ a.signout-button:hover {
 }
 
 .landing-subtitle {
-  position: absolute;
-  width: 28.68%;
-  height: 1.1%;
-  left: 47.43%;
-  top: 137%;
+  width: 85%;
 
   font-family: Recoleta Alt;
   font-style: normal;
@@ -181,24 +242,44 @@ a.signout-button:hover {
   font-size: 32px;
   line-height: 44px;
   text-align: left;
+  margin-top: 0px;
+  margin-bottom: 0px;
 
   color: #323232;
 }
 
-.landing-p1 {
-  position: absolute;
-  width: 44%;
-  height: 1.71%;
-  left: 28%;
-  top: 37%;
+.landing-subtitle2 {
+  font-family: Recoleta Alt;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 38px;
+  text-align: left;
 
+  color: #000000;
+}
+
+.landing-subtitle3 {
+  font-family: Recoleta Alt;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 38px;
+  text-align: left;
+
+  color: #000000;
+  padding-top: 120px;
+}
+
+.landing-p1 {
+  width: 55%;
   font-family: Circular Std;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
-  margin-top: 22px;
+  margin-top: 12px;
   margin-bottom: 22px;
 
   color: #777777;
@@ -206,11 +287,7 @@ a.signout-button:hover {
 }
 
 .landing-p2 {
-  position: absolute;
-  width: 28%;
-  height: 1.81%;
-  left: 47.85%;
-  top: 145%;
+  width: 80%;
 
   font-family: Circular Std;
   font-style: normal;
@@ -224,11 +301,8 @@ a.signout-button:hover {
 }
 
 .landing-p3 {
-  position: absolute;
-  width: 40.83%;
-  height: 2.71%;
-  left: 16.32%;
-  top: 207%;
+  width: 45%;
+  padding-left: 16%;
 
   font-family: Circular Std;
   font-style: normal;
@@ -241,12 +315,9 @@ a.signout-button:hover {
 }
 
 .landing-p4 {
-  position: absolute;
-  width: 22.36%;
-  height: 2.71%;
-  left: 62%;
-  top: 305%;
-
+  width: 22.3%;
+  padding-left: 4.5%;
+  padding-right: 6.5%;
   font-family: Circular Std;
   font-style: normal;
   font-weight: normal;
@@ -257,12 +328,31 @@ a.signout-button:hover {
   color: #000;
 }
 
+.landing-p5 {
+  font-family: Circular Std;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: left;
+
+  color: #777777;
+}
+
+.landing-p6 {
+  font-family: Circular Std;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: left;
+
+  color: #777777;
+}
+
 .landing-button1 {
-  position: absolute;
-  width: 14%;
-  height: 5%;
-  left: 43%;
-  top: 50%;
+  width: 182px;
+  height: 41px;
   font-family: Circular Std;
   font-style: normal;
   font-weight: normal;
@@ -272,7 +362,6 @@ a.signout-button:hover {
   text-align: center;
   color: #fff;
   vertical-align: middle;
-  display: table-cell;
 
   background: #437f55;
   border-radius: 50px;
@@ -281,11 +370,8 @@ a.signout-button:hover {
 }
 
 .landing-button2 {
-  position: absolute;
   width: 9.38%;
-  height: 7%;
-  left: 45.28%;
-  top: 439%;
+  height: 38px;
 
   background: #ffffff;
   border-radius: 50px;
@@ -306,63 +392,40 @@ a.signout-button:hover {
 }
 
 .landing-rectangle-1 {
-  position: absolute;
-  width: 60%;
-  height: 50%;
-  left: 20%;
-  top: 65%;
-
-  color: #e5e5e5;
+  width: 68%;
+  height: 12.6%;
+  margin-top: 77px;
   border-radius: 20px;
   border: none;
 }
 
 .landing-rectangle-2 {
-  position: absolute;
-  width: 23.75%;
-  height: 23%;
-  left: 20%;
-  top: 138%;
-
-  background: #e5e5e5;
+  width: 35%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
   border-radius: 30px;
   border: None;
 }
 
 .landing-rectangle-3 {
-  position: absolute;
   width: 100%;
-  height: 80%;
-  left: 0%;
-  top: 180%;
+  height: 791%;
   padding: 0;
   border: none;
-
-  background: #7eb9b2;
 }
 
 .landing-rectangle-4 {
-  position: absolute;
   width: 56%;
-  height: 60%;
-  left: 22%;
-  top: 223%;
-
-  background: #ffffff;
+  height: 11.9%;
+  margin-top: 25px;
   border: 1px solid #c4c4c4;
-  box-sizing: border-box;
   border-radius: 20px;
 }
 
 .landing-rectangle-5 {
-  position: absolute;
   width: 37%;
-  height: 58%;
-  left: 18%;
-  top: 327%;
-
-  background: #ffffff;
-  /* Gray 3 */
+  height: 100%;
 
   border: 1px solid #828282;
   box-sizing: border-box;
@@ -370,12 +433,10 @@ a.signout-button:hover {
 }
 
 .landing-rectangle-6 {
-  position: absolute;
   width: 83.33%;
-  height: 65%;
-  left: 8.33%;
-  top: 400%;
+  height: 600%;
 
-  background: #f46c35;
   border-radius: 30px;
+  margin-left: 10%;
+  margin-right: 10%;
 }
