@@ -11,6 +11,7 @@ import ProfilePage from "../Profile";
 import PasswordForgetPage from "../PasswordForget";
 import AdminPage from "../Admin";
 import AccountPage from "../Account";
+import DonatePage from "../Donate";
 
 import * as ROUTES from "../../constants/routes";
 import { withAuthentication } from "../Session";
@@ -25,6 +26,7 @@ const App = () => (
   <Router>
     <div>
       <Route exact path={ROUTES.LANDING} component={LandingPage} />
+      <Route path={ROUTES.DONATE} component={DonatePage} />
       <Route path={ROUTES.LOGIN} component={LoginPage} />
       <Route path={ROUTES.SIGNUP} component={SignupPage} />
       <Route path={ROUTES.PASSWORD_FORGET} component={PasswordForgetPage} />
