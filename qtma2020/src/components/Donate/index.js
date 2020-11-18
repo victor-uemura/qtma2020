@@ -57,7 +57,7 @@ function Donate() {
 
     // Call your backend to create the Checkout Session
     const response = await fetch(
-      "http://127.0.0.1:4242/create-checkout-session",
+      "https://python-voluntera.herokuapp.com/create-checkout-session",
       {
         method: "POST",
       }
