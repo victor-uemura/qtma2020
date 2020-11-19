@@ -15,9 +15,7 @@ function Landing() {
           impact in different ways. All of our partner organizations accept
           donations of both time and money.
         </div>
-        <Link to="/donate">
-          <button className="landing-button1">Sign up today</button>
-        </Link>
+        <button className="landing-button1">Sign up today</button>
         <img
           className="landing-rectangle-1"
           src="e5e5e5.png"
@@ -79,10 +77,12 @@ function Landing() {
             <div className="landing-p5">
               Apply to volunteer at select local charities chosen by our team.
             </div>
-            <div className="landing-subtitle3">Donate money</div>
-            <div className="landing-p6">
-              Not enough time? You can donate money towards organizations too.
-            </div>
+            <Link to="/donate" style={{ textDecoration: "none" }}>
+              <div className="landing-subtitle3">Donate money</div>
+              <div className="landing-p6">
+                Not enough time? You can donate money towards organizations too.
+              </div>
+            </Link>
           </div>
         </div>
         <div className="image-3">
