@@ -1,4 +1,6 @@
 export const LANDING = "/";
+export const DONATE = "/donate";
+export const THANKS = "/thanks";
 export const SIGNUP = "/signup";
 export const LOGIN = "/login";
 export const HOME = "/home";
