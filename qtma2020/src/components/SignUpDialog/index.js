@@ -29,11 +29,14 @@ const SignUpDialog = () => {
 	return (
 		<div>
 			<Button
-				variant='outlined'
-				color='primary'
+				//variant='outlined'
+				style={{
+					color: '#FFFFFF'
+				}}
+				//color='#FFFFFF'
 				onClick={handleClickOpen}
 			>
-				Open Dialog
+				Get Started
 			</Button>
 
 			<Dialog maxWidth={false} onClose={handleClose} open={open}>
