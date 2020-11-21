@@ -30,8 +30,8 @@ const NavBar = () => {
               height = "38"
               width = "118"
               style={{
-                marginLeft:"75px",
-                marginRight: "60px"
+                marginLeft:"50%",
+                marginRight: "200px"
               }}
                >
 
@@ -57,7 +57,7 @@ const NavBar = () => {
             color="#000000"
             //Link to FAQ page
             style={{
-              marginRight: "700px"
+              marginRight: "600px"
             }}
             >
             FAQ
