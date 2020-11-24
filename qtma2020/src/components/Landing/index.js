@@ -30,7 +30,7 @@ function Landing() {
           <div className="v-middle-box">
             <p className="landing-subtitle">We’re a registered charity</p>
             <p className="landing-p2">
-              Volunterra is a registered charity in the province of Ontario. You
+              Voluntera is a registered charity in the province of Ontario. You
               can trust that we’re committed to helping local communities.{" "}
             </p>
           </div>
