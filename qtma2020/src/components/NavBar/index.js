@@ -30,8 +30,8 @@ const NavBar = () => {
               height = "38"
               width = "118"
               style={{
-                marginLeft:"50%",
-                marginRight: "200px"
+                marginLeft:"13vw",
+                marginRight: "5vw"
               }}
                >
 
@@ -57,7 +57,7 @@ const NavBar = () => {
             color="#000000"
             //Link to FAQ page
             style={{
-              marginRight: "600px"
+              marginRight: "35vw"
             }}
             >
             FAQ
@@ -69,7 +69,7 @@ const NavBar = () => {
             color="#000000"
             component={Link} to={ROUTES.SIGNUP}
             style={{
-              marginRight: "10px"
+              marginRight: "1vw"
             }}
             >
             Log in
