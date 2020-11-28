@@ -27,8 +27,8 @@ const NavBar = () => {
         <div>
           <img 
               src="volunteraLogo.png"
-              height = "38"
-              width = "118"
+              height = "38vw"
+              width = "118vw"
               style={{
                 marginLeft:"13vw",
                 marginRight: "5vw"
