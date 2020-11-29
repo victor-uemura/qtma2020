@@ -1,0 +1,66 @@
+@font-face {
+  font-family: "Circular Std";
+  src: local("Circular Std"), url("../../assets/fonts/Circular-Std-Book.ttf");
+}
+
+.button-label {
+  font-family: Circular Std;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  background: #fff;
+  border: none;
+  padding-right: 15%;
+}
+
+.button-label3 {
+  font-family: Circular Std;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  background: #fff;
+  border: none;
+  padding: 0% 12.5%;
+}
+
+.button-label2 {
+  font-family: Circular Std;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  background: #437f55;
+  border-radius: 50px;
+  border: none;
+  padding: 1px 20px;
+}
+
+.navbar {
+  align-items: center; /* NEW */
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-between;
+  padding-top: 5px;
+  width: 100%;
+}
+
+.logo {
+  margin-left: 8%;
+  width: 15%;
+}
+
+.logo-item {
+  align-items: center; /* NEW */
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: space-around;
+}
+
+.three-item {
+  width: 40%;
+}
+
+.two-item {
+  width: 20%;
+}

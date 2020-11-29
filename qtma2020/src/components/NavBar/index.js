@@ -1,98 +1,41 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import * as ROUTES from "../../constants/routes";
-import {
-  Button,
-  makeStyles,
-  Toolbar,
-  Typography
-} from "@material-ui/core";
+import { Button, makeStyles, Toolbar, Typography } from "@material-ui/core";
 import "../Firebase/firebase";
-import useStyles from "../../styles/styles";
-import * as ROLES from "../../constants/roles";
 import SignUpDialog from "../SignUpDialog";
+import "./index.css";
 
-
-const NavBar = () => {
-  const classes = useStyles();
+function NavBar() {
   return (
-    <>
-      <Toolbar
-        variant="dense"
-        style={{
-          backgroundColor: "white",
-          marginTop: '10px'
-        }}
-      >
-        <div>
-          <img 
-              src="volunteraLogo.png"
-              height = "38vw"
-              width = "118vw"
-              style={{
-                marginLeft:"13vw",
-                marginRight: "5vw"
-              }}
-               >
+    <div className="navbar">
+      <div className="logo">
+        <img src="volunteraLogo.png" height="57vw" width="177vw"></img>
+      </div>
 
-          </img>
-        </div>
+      <div className="three-item">
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <button className="button-label3">Home</button>
+        </Link>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <button className="button-label3">About</button>
+        </Link>
+        <Link to="/faq" style={{ textDecoration: "none" }}>
+          <button className="button-label3">FAQ</button>
+        </Link>
+      </div>
 
-        <div>
-          <Button 
-            color="#000000"
-            component={Link} to={ROUTES.LANDING}
-          >
-            Home
-          </Button>
+      <div className="two-item">
+        <button className="button-label" component={Link} to={ROUTES.SIGNUP}>
+          Log in
+        </button>
 
-          <Button 
-            color="#000000"
-            //Link to about page
-            >
-            About
-          </Button>
-
-          <Button 
-            color="#000000"
-            //Link to FAQ page
-            style={{
-              marginRight: "35vw"
-            }}
-            >
-            FAQ
-          </Button>
-        </div>
-
-        <div>
-          <Button 
-            color="#000000"
-            component={Link} to={ROUTES.SIGNUP}
-            style={{
-              marginRight: "1vw"
-            }}
-            >
-            Log in
-          </Button>
-
-          <Button 
-              variant='contained'
-              style={{
-                  backgroundColor: '#437F55',
-                  borderRadius: '50px',
-                  color: '#FFFFFF',
-              }}
-              >
-                <SignUpDialog></SignUpDialog>
-          </Button>
-        </div>
-
-      </Toolbar>
-      <div className={classes.offset} />
-    </>
+        <button className="button-label2" variant="contained">
+          <SignUpDialog></SignUpDialog>
+        </button>
+      </div>
+    </div>
   );
-};
+}
 
-export default NavBar; 
-
-
+export default NavBar;

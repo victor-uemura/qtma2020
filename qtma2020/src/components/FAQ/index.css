@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "Recoleta Alt";
+  src: local("Recoleta Alt"), url("../../assets/fonts/RecoletaAlt-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Circular Std";
+  src: local("Circular Std"), url("../../assets/fonts/Circular-Std-Book.ttf");
+}
+
+.faq-body {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; /* NEW */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-start;
+  padding-top: 220px;
+  padding-bottom: 150px;
+  height: 100%;
+  width: 100%;
+}
+
+.faq-title1 {
+  font-family: Recoleta Alt;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 65px;
+  text-align: center;
+
+  color: #323232;
+}
+
+.faq-question {
+  font-family: Recoleta Alt;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 38px;
+  text-align: left;
+  padding-top: 50px;
+
+  color: #000000;
+}
+
+.faq-answer {
+  width: 55%;
+  font-family: Circular Std;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  margin-top: 12px;
+  margin-bottom: 22px;
+
+  color: #777777;
+  transform: scale(1);
+}
