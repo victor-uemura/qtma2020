@@ -17,8 +17,8 @@ function NavBar() {
         <Link to="/" style={{ textDecoration: "none" }}>
           <button className="button-label3">Home</button>
         </Link>
-        <Link to="/" style={{ textDecoration: "none" }}>
-          <button className="button-label3">About</button>
+        <Link to="/donate" style={{ textDecoration: "none" }}>
+          <button className="button-label3">Donate</button>
         </Link>
         <Link to="/faq" style={{ textDecoration: "none" }}>
           <button className="button-label3">FAQ</button>
