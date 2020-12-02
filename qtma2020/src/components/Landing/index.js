@@ -5,8 +5,7 @@ import { Link } from "react-router-dom";
 function Landing() {
   return (
     <div className="landing-body">
-      <SignUpDialog></SignUpDialog>
-      <div className="landing-top">
+      <div className="landing-top"> 
         <div className="landing-title1">
           The one-stop shop for social impact
         </div>
