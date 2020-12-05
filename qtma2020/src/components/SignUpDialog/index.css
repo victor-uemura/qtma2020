@@ -78,6 +78,10 @@ p.MuiDialogContentText-root {
 	text-transform: none;
 }
 
+.MuiButton-contained.Mui-disabled {
+	opacity: 0.5;
+}
+
 .dialogImg {
 	height: 500px;
 	width: 100%;

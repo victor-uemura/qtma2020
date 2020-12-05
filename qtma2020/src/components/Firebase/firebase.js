@@ -64,10 +64,7 @@ class Firebase {
 		const userRef = this.db.collection('users').add({
 			firstName,
 			lastName,
-			email,
-			birthDate,
-			location,
-			education
+			email
 		});
 	};
 
