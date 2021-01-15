@@ -6,12 +6,13 @@ const stripePromise = loadStripe(
   "pk_test_51HnvToF7eOu1j3PWQuzMnqZj9BZRncG7KTyrxwP82ATVQA9fZTA86J8nbOeNie6U6oKjxwhY8KCGh5tktROMD4sm00xxzFvrz0"
 );
 function Donate() {
+  const items = "?name=Martha's%20Table&name=Food%20Bank&value=500&value=1000";
   const donate_five = async (event) => {
     // Get Stripe.js instance
     const stripe = await stripePromise;
     // Call your backend to create the Checkout Session
     const response = await fetch(
-      "https://python-voluntera.herokuapp.com/donate-five",
+      "https://python-voluntera.herokuapp.com/donate-five" + items,
       {
         method: "POST",
       }
