@@ -1,42 +1,71 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import * as ROUTES from '../../constants/routes';
-import { Button, makeStyles, Toolbar, Typography } from '@material-ui/core';
-import '../Firebase/firebase';
-import SignUpDialog from '../SignUpDialog';
-import LogInDialog from '../LogInDialog';
-import './index.css';
+import React from "react";
+import {
+  Nav,
+  NavLink,
+  Bars,
+  NavMenu1,
+  NavMenu2,
+  NavBtn,
+  NavBtn2,
+  NavBtnLink,
+} from "./NavbarElements";
+import SignUpDialog from "../SignUpDialog";
+import LogInDialog from "../LogInDialog";
+import "./index.css";
 
-function NavBar() {
-	return (
-		<div className='navbar'>
-			<div className='logo'>
-				<img src='volunteraLogo.png' height='57vw' width='177vw'></img>
-			</div>
+const Navbar = (props) => {
+  return (
+    <>
+      <Nav background={props.background}>
+        <NavLink to="/">
+          <img src={props.logo} width="145" height="40" alt="logo" />
+        </NavLink>
+        <Bars />
+        <NavMenu1>
+          <NavLink to="/donate" activeStyle>
+            <p
+              className="text"
+              style={{
+                color: props.fontColor,
+              }}
+            >
+              Donate
+            </p>
+          </NavLink>
+          <NavLink to="/about" activeStyle>
+            <p
+              className="text"
+              style={{
+                color: props.fontColor,
+              }}
+            >
+              About
+            </p>
+          </NavLink>
+          <NavLink to="/faq" activeStyle>
+            <p
+              className="text"
+              style={{
+                color: props.fontColor,
+              }}
+            >
+              FAQ
+            </p>
+          </NavLink>
+          {/* Second Nav */}
+          {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
+        </NavMenu1>
+        <NavMenu2>
+          <NavBtn>
+            <LogInDialog fontColor={props.fontColor} />
+          </NavBtn>
+          <NavBtn2>
+            <SignUpDialog fontColor="#000" />
+          </NavBtn2>
+        </NavMenu2>
+      </Nav>
+    </>
+  );
+};
 
-			<div className='three-item'>
-				<Link to='/' style={{ textDecoration: 'none' }}>
-					<button className='button-label3'>Home</button>
-				</Link>
-				<Link to='/' style={{ textDecoration: 'none' }}>
-					<button className='button-label3'>About</button>
-				</Link>
-				<Link to='/faq' style={{ textDecoration: 'none' }}>
-					<button className='button-label3'>FAQ</button>
-				</Link>
-			</div>
-
-			<div className='two-item'>
-				<button className='button-label'>
-					<LogInDialog></LogInDialog>
-				</button>
-
-				<button className='button-label2' variant='contained'>
-					<SignUpDialog></SignUpDialog>
-				</button>
-			</div>
-		</div>
-	);
-}
-
-export default NavBar;
+export default Navbar;
