@@ -14,6 +14,8 @@ import DonatePage from "../Donate";
 import ThanksPage from "../Thanks";
 import FAQPage from "../FAQ";
 import logoBlack from "../../assets/img/logo-black.svg";
+import logoWhite from "../../assets/img/logo-white.svg";
+import Navigation from "../NavBar";
 
 import * as ROUTES from "../../constants/routes";
 import { withAuthentication } from "../Session";
@@ -33,7 +35,12 @@ const App = () => (
     <Route path={ROUTES.PROFILE} component={ProfilePage} />
 
     <div>
-      <Route exact path={ROUTES.LANDING} component={LandingPage} />
+      <DynamicLayoutRoute
+        exact
+        path={ROUTES.LANDING}
+        component={LandingPage}
+        layout="LANDING_NAV"
+      />
       <Route path={ROUTES.DONATE} component={DonatePage} />
       <Route path={ROUTES.THANKS} component={ThanksPage} />
       <Route path={ROUTES.FAQ} component={FAQPage} />
@@ -47,5 +54,39 @@ const App = () => (
     </div>
   </Router>
 );
+
+const DynamicLayoutRoute = (props) => {
+  const { component: RoutedComponent, layout, ...rest } = props;
+
+  // render actual Route from react-router
+  const actualRouteComponent = (
+    <Route {...rest} render={(props) => <RoutedComponent {...props} />} />
+  );
+
+  // depends on the layout, you can wrap Route component in different layouts
+  switch (layout) {
+    case "NAV": {
+      return (
+        <Navigation logo={logoBlack} fontColor="#000" background="#fff">
+          {actualRouteComponent}
+        </Navigation>
+      );
+    }
+    case "LANDING_NAV": {
+      return (
+        <Navigation logo={logoWhite} fontColor="#fff" background="#437F62">
+          {actualRouteComponent}
+        </Navigation>
+      );
+    }
+    default: {
+      return (
+        <Navigation logo={logoBlack} fontColor="#000" background="#fff">
+          {actualRouteComponent}
+        </Navigation>
+      );
+    }
+  }
+};
 
 export default withAuthentication(App);

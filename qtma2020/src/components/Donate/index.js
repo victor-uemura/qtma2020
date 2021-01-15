@@ -136,7 +136,6 @@ function Donate() {
 
   return (
     <div>
-      <Navigation logo={logoBlack} fontColor="#000" background="#fff" />
       <div className="donate-body">
         <div className="landing-title1">Donate to local businesses</div>
         <div className="donate-grid">
