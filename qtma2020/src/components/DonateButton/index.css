@@ -1,0 +1,11 @@
+.donate-button {
+  width: 179px;
+  height: 41px;
+  font-family: Circular Std;
+  font-weight: 400;
+  font-size: 14px;
+  background: #364aba;
+  border: none;
+  color: #ffffff;
+  border-radius: 10px;
+}

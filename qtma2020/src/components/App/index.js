@@ -14,6 +14,8 @@ import DonatePage from "../Donate";
 import ThanksPage from "../Thanks";
 import FAQPage from "../FAQ";
 import logoBlack from "../../assets/img/logo-black.svg";
+import logoWhite from "../../assets/img/logo-white.svg";
+import Navigation from "../NavBar";
 
 import * as ROUTES from "../../constants/routes";
 import { withAuthentication } from "../Session";

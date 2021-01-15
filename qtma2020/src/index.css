@@ -111,25 +111,6 @@ a.signout-button:hover {
   padding: 20px;
 }
 
-.donate-button {
-  width: 182px;
-  height: 182px;
-  font-family: Recoleta Alt;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 40px;
-  line-height: 18px;
-  align-items: center;
-  text-align: center;
-  color: #fff;
-  vertical-align: middle;
-
-  background: #7eb9b2;
-  border-radius: 50px;
-  border: none;
-  margin-top: 24;
-}
-
 .landing-body {
   display: flex;
   justify-content: flex-start;
