@@ -1,14 +1,10 @@
 import React from "react";
 import SignUpDialog from "../SignUpDialog";
 import { Link } from "react-router-dom";
-import Navigation from "../NavBar";
-import logoWhite from "../../assets/img/logo-white.svg";
 
 function Landing() {
   return (
     <div>
-      <Navigation logo={logoWhite} fontColor="#fff" background="#437F62" />
-
       <div className="landing-body">
         <div className="landing-top">
           <div className="landing-title1">
