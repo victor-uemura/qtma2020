@@ -61,7 +61,10 @@ const NavBarNonAuth = (props) => {
             <LogInDialog fontColor={props.fontColor} />
           </NavBtn>
           <NavBtn2>
-            <SignUpDialog fontColor="#000" />
+            <SignUpDialog
+              fontColor={props.signUpColor}
+              background={props.signUpBackground}
+            />
           </NavBtn2>
         </NavMenu2>
       </Nav>
@@ -116,7 +119,10 @@ const NavBarAuth = (props) => {
             <LogInDialog fontColor={props.fontColor} />
           </NavBtn>
           <NavBtn2>
-            <SignUpDialog fontColor="#000" />
+            <SignUpDialog
+              fontColor={props.signUpColor}
+              background={props.signUpBackground}
+            />
           </NavBtn2>
         </NavMenu2>
       </Nav>
@@ -133,12 +139,16 @@ export default function NavBar(props) {
             logo={props.logo}
             fontColor={props.fontColor}
             background={props.background}
+            signUpColor={props.signUpColor}
+            signUpBackground={props.signUpBackground}
           />
         ) : (
           <NavBarNonAuth
             logo={props.logo}
             fontColor={props.fontColor}
             background={props.background}
+            signUpColor={props.signUpColor}
+            signUpBackground={props.signUpBackground}
           />
         )
       }

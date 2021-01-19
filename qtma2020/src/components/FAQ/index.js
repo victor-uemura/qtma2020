@@ -7,7 +7,13 @@ import logoBlack from "../../assets/img/logo-black.svg";
 function FAQ() {
   return (
     <div>
-      <Navigation logo={logoBlack} fontColor="#000" background="#fff" />
+      <Navigation
+        logo={logoBlack}
+        fontColor="#000"
+        background="#fff"
+        signUpColor="#fff"
+        signUpBackground="#437F55"
+      />
 
       <div className="faq-body">
         <div className="faq-title1">

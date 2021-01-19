@@ -13,9 +13,7 @@ import AccountPage from "../Account";
 import DonatePage from "../Donate";
 import ThanksPage from "../Thanks";
 import FAQPage from "../FAQ";
-import logoBlack from "../../assets/img/logo-black.svg";
-import logoWhite from "../../assets/img/logo-white.svg";
-import Navigation from "../NavBar";
+import Footer from "../Footer";
 
 import * as ROUTES from "../../constants/routes";
 import { withAuthentication } from "../Session";
@@ -47,6 +45,7 @@ const App = () => (
       <Route path={ROUTES.ACCOUNT} component={AccountPage} />
       <Route path={ROUTES.ADMIN} component={AdminPage} />
     </div>
+    <Footer />
   </Router>
 );
 

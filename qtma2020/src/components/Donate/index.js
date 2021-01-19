@@ -9,7 +9,13 @@ const stripePromise = loadStripe(
 function Donate() {
   return (
     <div>
-      <Navigation logo={logoBlack} fontColor="#000" background="#fff" />
+      <Navigation
+        logo={logoBlack}
+        fontColor="#000"
+        background="#fff"
+        signUpColor="#fff"
+        signUpBackground="#437F55"
+      />
       <DonateButton />
     </div>
   );

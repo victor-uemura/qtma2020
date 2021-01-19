@@ -7,7 +7,13 @@ import logoWhite from "../../assets/img/logo-white.svg";
 function Landing() {
   return (
     <div>
-      <Navigation logo={logoWhite} fontColor="#fff" background="#437F62" />
+      <Navigation
+        logo={logoWhite}
+        fontColor="#fff"
+        background="#437F62"
+        signUpColor="#1B4843"
+        signUpBackground="#F3FDFC"
+      />
 
       <div className="landing-body">
         <div className="landing-top">
