@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Nav,
   NavLink,
@@ -13,6 +13,10 @@ import SignUpDialog from "../SignUpDialog";
 import LogInDialog from "../LogInDialog";
 import "./index.css";
 import { AuthUserContext } from "../Session";
+import firebase from "../Firebase";
+import { compose, withProps } from "recompose";
+import { withFirebase } from "../Firebase";
+import { withRouter } from "react-router-dom";
 
 const NavBarNonAuth = (props) => {
   return (
@@ -72,75 +76,117 @@ const NavBarNonAuth = (props) => {
   );
 };
 
-const NavBarAuth = (props) => {
-  return (
-    <>
-      <Nav background={props.background}>
-        <NavLink to="/">
-          <img src={props.logo} width="145" height="40" alt="logo" />
+const NavBarAuthBase = (props) => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [currentUser, setCurrentUser] = useState();
+
+  useEffect(() => {
+    props.firebase.getCurrentUser(props.authUser).then((response) => {
+      console.log(response);
+      setCurrentUser(response);
+      setIsLoading(false);
+    });
+  }, [isLoading]);
+  return isLoading ? (
+    <NavBarNonAuth
+      logo={props.logo}
+      fontColor={props.fontColor}
+      background={props.background}
+      signUpColor={props.signUpColor}
+      signUpBackground={props.signUpBackground}
+    />
+  ) : (
+    <Nav background={props.background}>
+      <NavLink to="/">
+        <img src={props.logo} width="145" height="40" alt="logo" />
+      </NavLink>
+      <Bars />
+      <NavMenu1>
+        <NavLink to="/donate" activeStyle>
+          <p
+            className="text"
+            style={{
+              color: props.fontColor,
+            }}
+          >
+            Donate
+          </p>
         </NavLink>
-        <Bars />
-        <NavMenu1>
-          <NavLink to="/donate" activeStyle>
-            <p
-              className="text"
-              style={{
-                color: props.fontColor,
-              }}
-            >
-              Donates
-            </p>
-          </NavLink>
-          <NavLink to="/about" activeStyle>
-            <p
-              className="text"
-              style={{
-                color: props.fontColor,
-              }}
-            >
-              About
-            </p>
-          </NavLink>
-          <NavLink to="/faq" activeStyle>
-            <p
-              className="text"
-              style={{
-                color: props.fontColor,
-              }}
-            >
-              FAQ
-            </p>
-          </NavLink>
-          {/* Second Nav */}
-          {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
-        </NavMenu1>
-        <NavMenu2>
-          <NavBtn>
-            <LogInDialog fontColor={props.fontColor} />
-          </NavBtn>
-          <NavBtn2>
-            <SignUpDialog
-              fontColor={props.signUpColor}
-              background={props.signUpBackground}
-            />
-          </NavBtn2>
-        </NavMenu2>
-      </Nav>
-    </>
+        <NavLink to="/about" activeStyle>
+          <p
+            className="text"
+            style={{
+              color: props.fontColor,
+            }}
+          >
+            About
+          </p>
+        </NavLink>
+        <NavLink to="/faq" activeStyle>
+          <p
+            className="text"
+            style={{
+              color: props.fontColor,
+            }}
+          >
+            FAQ
+          </p>
+        </NavLink>
+        {/* Second Nav */}
+        {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
+      </NavMenu1>
+      <NavMenu2>
+        <NavLink to="/cart" activeStyle>
+          <p
+            className="text"
+            style={{
+              color: props.fontColor,
+            }}
+          >
+            Cart
+          </p>
+        </NavLink>
+        <NavLink to="/profile" activeStyle>
+          <p
+            className="text"
+            style={{
+              color: props.fontColor,
+            }}
+          >
+            Hi {String(currentUser.name).split(" ")[0]}!
+          </p>
+        </NavLink>
+      </NavMenu2>
+    </Nav>
   );
 };
+
+const NavBarAuth = compose(withRouter, withFirebase)(NavBarAuthBase);
+const NavBarDialog = (props) => (
+  <div>
+    <NavBarAuth
+      logo={props.logo}
+      fontColor={props.fontColor}
+      background={props.background}
+      signUpColor={props.signUpColor}
+      signUpBackground={props.signUpBackground}
+      authUser={props.authUser}
+    />
+  </div>
+);
 
 export default function NavBar(props) {
   return (
     <AuthUserContext.Consumer>
       {(authUser) =>
         authUser ? (
-          <NavBarAuth
+          <NavBarDialog
             logo={props.logo}
             fontColor={props.fontColor}
             background={props.background}
             signUpColor={props.signUpColor}
             signUpBackground={props.signUpBackground}
+            authUser={authUser}
           />
         ) : (
           <NavBarNonAuth

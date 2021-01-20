@@ -4,8 +4,7 @@ import { compose, withProps } from "recompose";
 import { withFirebase } from "../Firebase";
 import * as ROUTES from "../../constants/routes";
 import "./index.css";
-import { FcGoogle } from "react-icons/fc";
-import { FaFacebook } from "react-icons/fa";
+import { SignInGoogle, SignInFacebook } from "../Login";
 
 import {
   Button,
@@ -54,14 +53,15 @@ class SignUpButtonBase extends Component {
     this.props.firebase
       .emailSignUp(email, passwordOne)
       .then((authUser) => {
-        return this.props.firebase.addUser(firstName, lastName, email);
+        const name = firstName + " " + lastName;
+        return this.props.firebase.addUser(name, email);
       })
       .then(() => {
         return this.props.firebase.doSendEmailVerification();
       })
       .then((authUser) => {
         this.setState({ ...INITIAL_STATE });
-        this.props.history.push(ROUTES.HOME);
+        this.props.history.push(ROUTES.LANDING);
       })
       .catch((error) => {
         this.setState({ error });
@@ -201,36 +201,10 @@ class SignUpButtonBase extends Component {
 
                     <div className="separator">or</div>
                     <div className="row">
-                      <Button
-                        startIcon={<FcGoogle />}
-                        fullWidth
-                        variant="outlined"
-                        style={{
-                          borderColor: "#BDBDBD",
-                          color: "#777777",
-                        }}
-                      >
-                        Continue with Google
-                      </Button>
+                      <SignInGoogle width="47vw" />
                     </div>
                     <div className="row">
-                      <Button
-                        startIcon={
-                          <FaFacebook
-                            style={{
-                              color: "#1877f2",
-                            }}
-                          />
-                        }
-                        fullWidth
-                        variant="outlined"
-                        style={{
-                          borderColor: "#BDBDBD",
-                          color: "#777777",
-                        }}
-                      >
-                        Continue with Facebook
-                      </Button>
+                      <SignInFacebook width="47vw" />
                     </div>
                     <div className="row">
                       <p>

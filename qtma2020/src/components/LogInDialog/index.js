@@ -9,8 +9,7 @@ import {
 } from "@material-ui/core";
 import { useForm } from "react-hook-form";
 import "./index.css";
-import { FcGoogle } from "react-icons/fc";
-import { FaFacebook } from "react-icons/fa";
+import { SignInGoogle, SignInFacebook } from "../Login";
 
 const LogInDialog = (props) => {
   const [open, setOpen] = React.useState(false);
@@ -81,30 +80,10 @@ const LogInDialog = (props) => {
 
                   <div className="separator">or</div>
                   <div className="row">
-                    <Button
-                      startIcon={<FcGoogle />}
-                      fullWidth
-                      variant="outlined"
-                      style={{
-                        borderColor: "#BDBDBD",
-                        color: "#777777",
-                      }}
-                    >
-                      Continue with Google
-                    </Button>
+                    <SignInGoogle width="30vw" />
                   </div>
                   <div className="row">
-                    <Button
-                      startIcon={<FaFacebook style={{ color: "#1877f2" }} />}
-                      fullWidth
-                      variant="outlined"
-                      style={{
-                        borderColor: "#BDBDBD",
-                        color: "#777777",
-                      }}
-                    >
-                      Continue with Facebook
-                    </Button>
+                    <SignInFacebook width="30vw" />
                   </div>
                   <div className="row">
                     <p>
