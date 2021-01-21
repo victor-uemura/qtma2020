@@ -36,6 +36,7 @@ const App = () => (
       <Route path={ROUTES.PASSWORD_FORGET} component={PasswordForgetPage} />
       <Route path={ROUTES.CART} component={CartPage} />
       <Route path={ROUTES.TEMP} component={TempPage} />
+      <Route path={ROUTES.PROFILE} component={ProfilePage} />
     </div>
     <Footer />
   </Router>
