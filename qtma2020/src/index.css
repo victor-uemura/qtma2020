@@ -124,7 +124,7 @@ a.signout-button:hover {
   flex-wrap: wrap;
   align-content: center;
   justify-content: flex-start;
-  padding-top: 220px;
+  padding-top: 0px;
   height: 100%;
   width: 100%;
 }
@@ -133,8 +133,8 @@ a.signout-button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 3.74%;
-  margin-top: 166px;
+  height: 10%;
+  margin-top: 90px;
 }
 
 .h-middle-box2 {
@@ -154,15 +154,18 @@ a.signout-button:hover {
   padding-top: 53px;
 }
 
+
 .v-middle-box {
-  align-items: center; /* NEW */
+  align-items: center; /*New*/
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-content: flex-end;
   justify-content: right;
-  width: 45%;
+
+  width: 80%;
 }
+
 
 .v-middle-box2 {
   align-items: flex-start; /* NEW */
@@ -190,7 +193,13 @@ a.signout-button:hover {
   align-items: center;
 }
 
-.left-title {
+.image-7 {
+    height: 2.05%;
+    display: flex;
+    width: 200%;
+}
+
+  .left-title {
   display: flex;
   justify-content: flex-start;
   width: 100%;
@@ -204,7 +213,7 @@ a.signout-button:hover {
   line-height: 65px;
   text-align: center;
 
-  color: #323232;
+  color: #FFFFFF;
 }
 
 .landing-title2 {
@@ -250,14 +259,13 @@ a.signout-button:hover {
 }
 
 .landing-subtitle {
-  width: 85%;
-
+  width: 100%;
+  text-align: center;
   font-family: Recoleta Alt;
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
   line-height: 44px;
-  text-align: left;
   margin-top: 0px;
   margin-bottom: 0px;
 
@@ -298,21 +306,19 @@ a.signout-button:hover {
   margin-top: 12px;
   margin-bottom: 22px;
 
-  color: #777777;
+  color: #FFFFFF;
   transform: scale(1);
 }
 
 .landing-p2 {
-  width: 80%;
-
+  width: 66%;
   font-family: Circular Std;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 20px;
-  text-align: left;
+  text-align: center;
   margin-top: 15px;
-
   color: #777777;
 }
 
@@ -401,15 +407,15 @@ a.signout-button:hover {
   display: flex;
   align-items: center;
   text-align: center;
-  color: #f46c35;
+  color: #7eb9b2;
   border: none;
   vertical-align: middle;
   display: table-cell;
 }
 
 .landing-rectangle-1 {
-  width: 68%;
-  height: 12.6%;
+  width: 85%;
+  height: 9%;
   margin-top: 77px;
   border-radius: 20px;
   border: none;
@@ -456,3 +462,26 @@ a.signout-button:hover {
   margin-left: 10%;
   margin-right: 10%;
 }
+
+.landing-rectangle-7 {
+  width: 100%;
+  height: 630%;
+}
+
+.row{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.grid{
+  display: grid;
+  margin: auto;
+  grid-template-columns: 19% 20% 22% 20% 19%;
+  grid-template-rows: 50% 50%;
+  grid-row-gap: 20px;
+  grid-column-gap: 10px;
+  align-items: center;
+
+}
+
+
