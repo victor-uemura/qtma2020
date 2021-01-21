@@ -17,6 +17,8 @@ import firebase from "../Firebase";
 import { compose, withProps } from "recompose";
 import { withFirebase } from "../Firebase";
 import { withRouter } from "react-router-dom";
+import NavBarIconBlack from "../NavBarIcon/black";
+import NavBarIconWhite from "../NavBarIcon/white";
 
 const NavBarNonAuth = (props) => {
   return (
@@ -82,7 +84,6 @@ const NavBarAuthBase = (props) => {
 
   useEffect(() => {
     props.firebase.getCurrentUser(props.authUser).then((response) => {
-      console.log(response);
       setCurrentUser(response);
       setIsLoading(false);
     });
@@ -141,10 +142,16 @@ const NavBarAuthBase = (props) => {
             className="text"
             style={{
               color: props.fontColor,
+              paddingRight: "0.5vw",
             }}
           >
             Cart
           </p>
+          {props.fontColor == "#fff" ? (
+            <NavBarIconWhite />
+          ) : (
+            <NavBarIconBlack />
+          )}
         </NavLink>
         <NavLink to="/profile" activeStyle>
           <p
@@ -162,6 +169,7 @@ const NavBarAuthBase = (props) => {
 };
 
 const NavBarAuth = compose(withRouter, withFirebase)(NavBarAuthBase);
+
 const NavBarDialog = (props) => (
   <div>
     <NavBarAuth
