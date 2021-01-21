@@ -113,6 +113,11 @@ class Firebase {
         fallback();
       }
     });
+  user = (uid) => this.db.doc(`users/${uid}`);
+
+  users = () => this.db.collection("users");
+
+  postings = () => this.db.collection("postings");
 }
 
 export default Firebase;
