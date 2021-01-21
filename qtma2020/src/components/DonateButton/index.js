@@ -24,7 +24,7 @@ class DonateButton extends Component {
       const stripe = await stripePromise;
       // Call your backend to create the Checkout Session
       const response = await fetch(
-        "https://python-voluntera.herokuapp.com/donate-five" + stripeString,
+        "https://python-voluntera.herokuapp.com/donate" + stripeString,
         {
           method: "POST",
         }
