@@ -15,7 +15,14 @@ class Recipe extends Component {
           </li>
         </div>
         <div className="checkout">
-          <DonateButton />
+          {this.props.addedItems.length == 0 ? (
+            <div />
+          ) : (
+            <DonateButton
+              addedItems={this.props.addedItems}
+              total={this.props.total}
+            />
+          )}
         </div>
       </div>
     );
