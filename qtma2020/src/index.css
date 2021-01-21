@@ -133,7 +133,7 @@ a.signout-button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 3.74%;
+  height: 10%;
   margin-top: 166px;
 }
 
@@ -154,15 +154,18 @@ a.signout-button:hover {
   padding-top: 53px;
 }
 
+
 .v-middle-box {
-  align-items: center; /* NEW */
+  align-items: center; /*New*/
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-content: flex-end;
   justify-content: right;
-  width: 45%;
+
+  width: 80%;
 }
+
 
 .v-middle-box2 {
   align-items: flex-start; /* NEW */
@@ -250,14 +253,13 @@ a.signout-button:hover {
 }
 
 .landing-subtitle {
-  width: 85%;
-
+  width: 100%;
+  text-align: center;
   font-family: Recoleta Alt;
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
   line-height: 44px;
-  text-align: left;
   margin-top: 0px;
   margin-bottom: 0px;
 
@@ -303,16 +305,14 @@ a.signout-button:hover {
 }
 
 .landing-p2 {
-  width: 80%;
-
+  width: 66%;
   font-family: Circular Std;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 20px;
-  text-align: left;
+  text-align: center;
   margin-top: 15px;
-
   color: #777777;
 }
 
@@ -456,3 +456,21 @@ a.signout-button:hover {
   margin-left: 10%;
   margin-right: 10%;
 }
+
+.row{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.grid{
+  display: grid;
+  margin: auto;
+  grid-template-columns: 19% 20% 22% 20% 19%;
+  grid-template-rows: 50% 50%;
+  grid-row-gap: 20px;
+  grid-column-gap: 10px;
+  align-items: center;
+
+}
+
+

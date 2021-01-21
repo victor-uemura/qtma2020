@@ -3,6 +3,7 @@ import SignUpDialog from "../SignUpDialog";
 import { Link } from "react-router-dom";
 import Navigation from "../NavBar";
 import logoWhite from "../../assets/img/logo-white.svg";
+import StepsBlock from "../StepsBlock";
 
 function Landing() {
   return (
@@ -31,18 +32,28 @@ function Landing() {
             src="e5e5e5.png"
             alt="Picture 1"
           ></img>
-          <div className="h-middle-box">
-            <img
-              className="landing-rectangle-2"
-              src="e5e5e5.png"
-              alt="Picture 1"
-            ></img>
+          <div className="h-middle-box"> 
             <div className="v-middle-box">
-              <p className="landing-subtitle">We’re a registered charity</p>
-              <p className="landing-p2">
-                Voluntera is a registered charity in the province of Ontario.
-                You can trust that we’re committed to helping local communities.{" "}
+
+              <p className="landing-subtitle">Here are some of our partnered organizations</p>
+              <p className="landing-p2">Our partner organizations are selected after months of research to
+                check for credibility, trust, and true need. We curate these opportunities 
+                to best match your profile.{" "}
               </p>
+              <div class="grid">
+                <a href="https://www.cysticfibrosis.ca/" target="_blank"><img src="cystic_fibrosis_canada.svg" alt="cystic fibrosis canada"></img></a>
+                <a href="https://kidney.ca/" target="_blank"><img src="kidney_foundation.svg" alt="kidney foundation"></img></a>
+                <a href="https://lunghealth.ca/" target="_blank"><img src="lung_health_foundation.svg" alt="lung health foundation"></img></a>
+                <a href="http://www.marthastable.ca/" target="_blank"><img src="marthas_table.svg" alt="Martha's table"></img></a>
+                <a href="https://bfo-kingston.ca/" target="_blank"><img src="bereaved_ontario.svg" alt="Bereaved Families of Ontario"></img></a>
+
+                <a href="https://www.neads.ca/" target="_blank"><img src="neads.svg" alt="NEADS"></img></a>
+                <a href="https://www.amhs-kfla.ca/" target="_blank"><img src="amhs_kfla.svg" alt="AMHS KFLA"></img></a>
+                <a href="https://www.cnib.ca/en?region=on" target="_blank"><img src="cnib_foundation.svg" alt="CNIB Foundation"></img></a>
+                <a href="https://www.kingstonfoodbank.ca/" target="_blank"><img src="foodbank.svg" alt="Partners in Mission Foodbank"></img></a>
+                <a href="https://www.marchofdimes.ca/en-ca" target="_blank"><img src="march_canada.svg" alt="March of Dimes Canada"></img></a>
+              </div>
+
             </div>
           </div>
           <div className="image-3">
@@ -59,7 +70,7 @@ function Landing() {
             <p className="landing-p3">
               Our partner organizations are selected after months of research to
               check for credibility, trust, and true need. We curate these
-              opportunities to best match your profile.
+              opportunities to best match your profile
             </p>
           </div>
           <img
