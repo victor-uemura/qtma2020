@@ -15,9 +15,17 @@ function Landing() {
         signUpColor="#1B4843"
         signUpBackground="#F3FDFC"
       />
-
       <div className="landing-body">
         <div className="landing-top">
+
+          <div className="image-7">
+            <img
+              className="landing-rectangle-7"
+              src="437F62.png"
+              alt="green">
+            </img>
+          </div>
+          
           <div className="landing-title1">
             The one-stop shop for social impact
           </div>
@@ -26,7 +34,6 @@ function Landing() {
             impact in different ways. All of our partner organizations accept
             donations of both time and money.
           </div>
-          <button className="landing-button1">Sign up today</button>
           <img
             className="landing-rectangle-1"
             src="e5e5e5.png"
@@ -110,7 +117,7 @@ function Landing() {
           <div className="image-3">
             <img
               className="landing-rectangle-6"
-              src="f46c35.png"
+              src="7eb9b2.png"
               alt="Picture 1"
             ></img>
           </div>
