@@ -112,7 +112,7 @@ const NavBarAuthBase = (props) => {
             Donate
           </p>
         </NavLink>
-        <NavLink to="/about" activeStyle>
+        <NavLink to="/temp" activeStyle>
           <p
             className="text"
             style={{

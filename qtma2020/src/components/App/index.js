@@ -13,6 +13,8 @@ import DonatePage from "../Donate";
 import ThanksPage from "../Thanks";
 import FAQPage from "../FAQ";
 import Footer from "../Footer";
+import CartPage from "../Cart";
+import TempPage from "../Temp";
 
 import * as ROUTES from "../../constants/routes";
 import { withAuthentication } from "../Session";
@@ -25,10 +27,6 @@ TagManager.initialize(tagManagerArgs);
 
 const App = () => (
   <Router>
-    <Route exact path={ROUTES.LOGIN} component={LandingPage} />
-    <Route path={ROUTES.SIGNUP} component={SignupPage} />
-    <Route path={ROUTES.HOME} component={HomePage} />
-
     <div>
       <Route exact path={ROUTES.LANDING} component={LandingPage} />
       <Route path={ROUTES.DONATE} component={DonatePage} />
@@ -36,10 +34,8 @@ const App = () => (
       <Route path={ROUTES.FAQ} component={FAQPage} />
       <Route path={ROUTES.SIGNUP} component={SignupPage} />
       <Route path={ROUTES.PASSWORD_FORGET} component={PasswordForgetPage} />
-      <Route path={ROUTES.HOME} component={HomePage} />
-      <Route path={ROUTES.PROFILE} component={ProfilePage} />
-      <Route path={ROUTES.ACCOUNT} component={AccountPage} />
-      <Route path={ROUTES.ADMIN} component={AdminPage} />
+      <Route path={ROUTES.CART} component={CartPage} />
+      <Route path={ROUTES.TEMP} component={TempPage} />
     </div>
     <Footer />
   </Router>
