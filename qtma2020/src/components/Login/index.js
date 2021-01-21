@@ -23,7 +23,7 @@ class SignInGoogleBase extends Component {
           {
             name: socialAuthUser.user.displayName,
             email: socialAuthUser.user.email,
-            donations: {},
+            donations: [],
           },
           { merge: true }
         );
@@ -84,7 +84,7 @@ class SignInFacebookBase extends Component {
           {
             name: socialAuthUser.additionalUserInfo.profile.name,
             email: socialAuthUser.additionalUserInfo.profile.email,
-            donations: {},
+            donations: [],
           },
           { merge: true }
         );

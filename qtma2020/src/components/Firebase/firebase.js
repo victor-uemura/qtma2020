@@ -68,6 +68,20 @@ class Firebase {
     });
   };
 
+  addDonation = (donations, authUser) => {
+    const userRef = this.db.collection("users").doc(authUser.uid);
+    donations.forEach(function (donation) {
+      userRef.update({
+        donations: firebase.firestore.FieldValue.arrayUnion({
+          time: new Date(),
+          place: donation.place,
+          amount: donation.amount,
+          approved: false,
+        }),
+      });
+    });
+  };
+
   doSendEmailVerification = () => this.auth.currentUser.sendEmailVerification();
 
   doSignInWithGoogle = () => this.auth.signInWithPopup(this.googleProvider);
@@ -99,12 +113,6 @@ class Firebase {
         fallback();
       }
     });
-
-  user = (uid) => this.db.doc(`users/${uid}`);
-
-  users = () => this.db.collection("users");
-
-  postings = () => this.db.collection("postings");
 }
 
 export default Firebase;
