@@ -134,7 +134,7 @@ a.signout-button:hover {
 	align-items: center;
 	justify-content: center;
 	height: 10%;
-	margin-top: 90px;
+	margin-top: 130px;
 }
 
 .h-middle-box2 {
@@ -142,7 +142,7 @@ a.signout-button:hover {
 	align-items: center;
 	justify-content: center;
 	height: 3.74%;
-	margin-top: 211px;
+	margin-top: 0px;
 }
 
 .h-middle-box3 {
@@ -177,10 +177,21 @@ a.signout-button:hover {
 }
 
 .image-3 {
-	height: 2.05%;
+	height: 7.0%;
+	display: flex;
+	width: 85%;
+	padding-top: 100px;
+	margin-left:8%;
+	margin-right: 10%;
+}
+
+.image-4 {
+	height: 2.6%;
 	display: flex;
 	width: 100%;
-	padding-top: 122px;
+	padding-top: 100px;
+	margin-left:10%;
+	margin-right: 10%;
 }
 
 .image-6 {
@@ -252,6 +263,7 @@ a.signout-button:hover {
 	font-size: 48px;
 	line-height: 65px;
 	text-align: center;
+
 
 	color: #ffffff;
 }
@@ -433,6 +445,7 @@ a.signout-button:hover {
 	height: 791%;
 	padding: 0;
 	border: none;
+	border-radius: 30px;
 }
 
 .landing-rectangle-4 {
@@ -454,7 +467,7 @@ a.signout-button:hover {
 
 .landing-rectangle-6 {
 	width: 83.33%;
-	height: 600%;
+	height: 500%;
 
 	border-radius: 30px;
 	margin-left: 10%;
@@ -488,3 +501,24 @@ a.signout-button:hover {
 	grid-column-gap: 10px;
 	align-items: center;
 }
+
+.flex-row{
+	display: flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	align-items: center;
+	margin-top: 10px;
+}
+
+.flex-col{
+	flex-basis: 100%;
+	margin-left: 12px;
+	margin-right:12px;
+	align-items: baseline;
+}
+
+@media screen and (min-width: 800px) {
+	.flex-col {
+	  flex: 1;
+	}
+  }

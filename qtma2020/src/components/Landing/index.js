@@ -88,7 +88,12 @@ function Landing() {
 								trust, and true need. We curate these
 								opportunities to best match your profile.{' '}
 							</p>
-							<div className='grid'>
+
+
+							
+							<div class='flex-row'>
+
+								<div class='flex-col'>
 								<a
 									href='https://www.cysticfibrosis.ca/'
 									target='_blank'
@@ -97,13 +102,17 @@ function Landing() {
 										src='cystic_fibrosis_canada.svg'
 										alt='cystic fibrosis canada'
 									></img>
-								</a>
+								</a></div>
+								
+								<div clas='flex-col'>
 								<a href='https://kidney.ca/' target='_blank'>
 									<img
 										src='kidney_foundation.svg'
 										alt='kidney foundation'
 									></img>
-								</a>
+								</a></div>
+
+								<div class='flex-col'>
 								<a
 									href='https://lunghealth.ca/'
 									target='_blank'
@@ -112,7 +121,9 @@ function Landing() {
 										src='lung_health_foundation.svg'
 										alt='lung health foundation'
 									></img>
-								</a>
+								</a></div>
+
+								<div class='flex-col'>
 								<a
 									href='http://www.marthastable.ca/'
 									target='_blank'
@@ -121,7 +132,9 @@ function Landing() {
 										src='marthas_table.svg'
 										alt="Martha's table"
 									></img>
-								</a>
+								</a></div>
+
+								<div class='flex-col'>
 								<a
 									href='https://bfo-kingston.ca/'
 									target='_blank'
@@ -130,11 +143,18 @@ function Landing() {
 										src='bereaved_ontario.svg'
 										alt='Bereaved Families of Ontario'
 									></img>
-								</a>
+								</a></div></div>
 
+
+
+								<div class='flex-row'>
+
+								<div class='flex-col'>
 								<a href='https://www.neads.ca/' target='_blank'>
 									<img src='neads.svg' alt='NEADS'></img>
-								</a>
+								</a></div>
+
+								<div class='flex-col'>
 								<a
 									href='https://www.amhs-kfla.ca/'
 									target='_blank'
@@ -143,7 +163,9 @@ function Landing() {
 										src='amhs_kfla.svg'
 										alt='AMHS KFLA'
 									></img>
-								</a>
+								</a></div>
+
+								<div class='flex-col'>
 								<a
 									href='https://www.cnib.ca/en?region=on'
 									target='_blank'
@@ -152,7 +174,9 @@ function Landing() {
 										src='cnib_foundation.svg'
 										alt='CNIB Foundation'
 									></img>
-								</a>
+								</a></div>
+
+								<div class='flex-col'>
 								<a
 									href='https://www.kingstonfoodbank.ca/'
 									target='_blank'
@@ -161,7 +185,9 @@ function Landing() {
 										src='foodbank.svg'
 										alt='Partners in Mission Foodbank'
 									></img>
-								</a>
+								</a></div>
+
+								<div class='flex-col'></div>
 								<a
 									href='https://www.marchofdimes.ca/en-ca'
 									target='_blank'
@@ -171,34 +197,14 @@ function Landing() {
 										alt='March of Dimes Canada'
 									></img>
 								</a>
-							</div>
+							
+								</div>
+							
 						</div>
 					</div>
-					<div className='image-3'>
-						<img
-							className='landing-rectangle-3'
-							src='7eb9b2.png'
-							alt='Picture 1'
-						></img>
-					</div>
-					<div className='left-title'>
-						<h1 className='landing-title2'>
-							Find organizations near you
-						</h1>
-					</div>
-					<div className='left-title'>
-						<p className='landing-p3'>
-							Our partner organizations are selected after months
-							of research to check for credibility, trust, and
-							true need. We curate these opportunities to best
-							match your profile
-						</p>
-					</div>
-					<img
-						className='landing-rectangle-4'
-						src='e5e5e5.png'
-						alt='Picture 1'
-					></img>
+
+					<StepsBlock></StepsBlock>
+
 					<div className='h-middle-box2'>
 						<h1 className='landing-title3'>
 							Make an impact the way that works best for you
@@ -237,7 +243,7 @@ function Landing() {
 							</Link>
 						</div>
 					</div>
-					<div className='image-3'>
+					<div className='image-4'>
 						<img
 							className='landing-rectangle-6'
 							src='7eb9b2.png'
@@ -250,6 +256,7 @@ function Landing() {
 					<button className='landing-button2'>Get Started</button>
 				</div>
 			</div>
+
 		</div>
 	);
 }
