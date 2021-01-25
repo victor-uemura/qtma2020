@@ -7,13 +7,25 @@ import Firebase, { FirebaseContext } from "./components/Firebase";
 import cartReducer from "./components/reducers/cartReducer";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
+import MediaQuery from "react-responsive";
 
 const store = createStore(cartReducer);
 
 ReactDOM.render(
   <FirebaseContext.Provider value={new Firebase()}>
     <Provider store={store}>
-      <App />
+      <MediaQuery minWidth={1100}>
+        <App />
+      </MediaQuery>
+      <MediaQuery maxWidth={1100}>
+        <h1>
+          We don't support mobile yet <br /> <br />
+          (｀･ω･´)
+          <br />
+          <br /> (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ <br />
+          <br /> ┐(︶▽︶)┌
+        </h1>
+      </MediaQuery>{" "}
     </Provider>
   </FirebaseContext.Provider>,
   document.getElementById("root")
