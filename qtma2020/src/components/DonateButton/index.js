@@ -28,7 +28,7 @@ class DonateButtonBase extends Component {
     var stripeString = "?";
     this.props.addedItems.forEach(function (item) {
       var temp = encodeURI(
-        "name=" + item.title + "&value=" + item.price * 100 + "&"
+        "name=" + item.title + "&value=" + item.amount * 100 + "&"
       );
       stripeString = stripeString.concat(temp);
     });
@@ -44,14 +44,6 @@ class DonateButtonBase extends Component {
     );
     const session = await response.json();
     // When the customer clicks on the button, redirect them to Checkout.
-    if (this.props.authUser !== "") {
-      var donations = [];
-      this.props.addedItems.forEach(function (item) {
-        var temp = { place: item.title, amount: item.price };
-        donations.push(temp);
-      });
-      this.props.firebase.addDonation(donations, this.props.authUser);
-    }
     await stripe.redirectToCheckout({
       sessionId: session.id,
     });

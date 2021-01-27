@@ -1,21 +1,27 @@
 .rectangle {
   width: 80%;
   height: 10%;
-  margin-top:0px;
+  margin-top: 0px;
   border-radius: 20px;
   justify-content: center;
 }
 
-.image-step{
+.image-step {
   height: 2.05%;
   display: flex;
   width: 100%;
   justify-content: center;
 }
 
-.container {
-  position: relative;
-  margin-top:0px;
+.containerg {
+  margin-top: 40px;
+  background-color: #e5e5e5;
+  border-radius: 30px;
+  padding-bottom: 100px;
+  padding-top: 40px;
+  justify-content: center;
+  margin-left: 9%;
+  margin-right: 9%;
 }
 
 .step-impact {
@@ -33,7 +39,7 @@
   width: 100%;
   text-align: center;
   font-family: Circular Std;
-  font-size:24px;
+  font-size: 24px;
   line-height: 44px;
   color: #777777;
 }
@@ -42,7 +48,7 @@
   width: 100%;
   text-align: center;
   font-family: Recola Alt;
-  font-size:14px;
+  font-size: 14px;
   color: #828282;
 }
 
@@ -50,31 +56,47 @@
   width: 100%;
   text-align: center;
   font-family: Recola Alt;
-  font-size:18px;
+  font-size: 18px;
   color: #202020;
 }
 
-.step-explain{
+.step-explain {
   width: 100%;
   text-align: center;
   font-family: Circular Std;
-  font-size:16px;
+  font-size: 16px;
   color: #202020;
 }
 
-.grid2{
+.grid2 {
   display: grid;
   grid-template-columns: 28% 28% 28%;
   grid-template-rows: 70% 10% 17% 40%;
   align-items: baseline;
   margin-left: 17%;
-  margin-right:10%;
+  margin-right: 10%;
   grid-column-gap: 30px;
-
 }
 
 .center {
   margin-left: auto;
-  margin-right:auto;
+  margin-right: auto;
   vertical-align: bottom;
+}
+
+.grey-steps {
+  width: 100%;
+  height: 791%;
+  padding: 0;
+  border: none;
+  border-radius: 30px;
+}
+
+.grey-steps-div {
+  height: 7%;
+  display: flex;
+  width: 85%;
+  padding-top: 100px;
+  margin-left: 8%;
+  margin-right: 10%;
 }

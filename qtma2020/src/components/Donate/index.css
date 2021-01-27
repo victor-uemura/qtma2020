@@ -1,0 +1,14 @@
+.donateCards {
+  display: flex;
+  justify-content: center; /* Change this */
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.orgCard {
+  padding: 20px;
+}
+
+.donatebg {
+  background-color: #f9f9f9;
+}

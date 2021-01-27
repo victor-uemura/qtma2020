@@ -7,17 +7,18 @@ import {
 } from "./action-types/cart-actions";
 
 //add cart action
-export const addToCart = (id) => {
+export const addToCart = (title, amount) => {
   return {
     type: ADD_TO_CART,
-    id,
+    title,
+    amount,
   };
 };
 //remove item action
-export const removeItem = (id) => {
+export const removeItem = (title) => {
   return {
     type: REMOVE_ITEM,
-    id,
+    title,
   };
 };
 //subtract qt action
