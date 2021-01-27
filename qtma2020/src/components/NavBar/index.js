@@ -63,6 +63,22 @@ const NavBarNonAuth = (props) => {
           {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
         </NavMenu1>
         <NavMenu2>
+          <NavLink to="/cart" activeStyle>
+            <p
+              className="text"
+              style={{
+                color: props.fontColor,
+                paddingRight: "0.5vw",
+              }}
+            >
+              Cart
+            </p>
+            {props.fontColor == "#fff" ? (
+              <NavBarIconWhite />
+            ) : (
+              <NavBarIconBlack />
+            )}
+          </NavLink>
           <NavBtn>
             <LogInDialog fontColor={props.fontColor} />
           </NavBtn>

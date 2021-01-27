@@ -17,7 +17,7 @@ const DonateButton = (props) => (
       authUser ? (
         <DonateButtonFire authUser={authUser} addedItems={props.addedItems} />
       ) : (
-        <DonateButtonFire authUser="" />
+        <DonateButtonFire authUser="" addedItems={props.addedItems} />
       )
     }
   </AuthUserContext.Consumer>
