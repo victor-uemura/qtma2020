@@ -1,0 +1,49 @@
+.thanks-body {
+  display: flex;
+  background-color: #fff;
+  justify-content: flex-start;
+  align-items: center; /* NEW */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  padding-top: 100px;
+}
+.thanks-title1 {
+  font-family: Recoleta Alt;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 65px;
+  text-align: center;
+
+  color: #000;
+}
+
+.thanks-p1 {
+  font-family: Circular Std;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 18px;
+  line-height: 24px;
+  padding-bottom: 50px;
+}
+
+.thanks-button1 {
+  width: 182px;
+  height: 41px;
+  font-family: Circular Std;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  vertical-align: middle;
+
+  background: #437f55;
+  border-radius: 50px;
+  border: none;
+  margin-top: 24;
+}

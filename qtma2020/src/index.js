@@ -14,12 +14,12 @@ const store = createStore(cartReducer);
 ReactDOM.render(
   <FirebaseContext.Provider value={new Firebase()}>
     <Provider store={store}>
-      <MediaQuery minWidth={1100}>
+      <MediaQuery minWidth={1218}>
         <App />
       </MediaQuery>
-      <MediaQuery maxWidth={1100}>
+      <MediaQuery maxWidth={1218}>
         <h1>
-          We don't support mobile yet <br /> <br />
+          We don't support mobile/tablets yet <br /> <br />
           (｀･ω･´)
           <br />
           <br /> (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ <br />
