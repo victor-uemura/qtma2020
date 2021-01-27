@@ -221,7 +221,7 @@ function Landing() {
           <h1 className="landing-title4">
             Sign up today and start making an impact{" "}
           </h1>
-          <button className="landing-button2">Get Started</button>
+          <SignUpDialog fontColor="#7eb9b2" background="#fff" />
         </div>
       </div>
     </div>
