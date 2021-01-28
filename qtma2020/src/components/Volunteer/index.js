@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 import "./index.css";
 import Navigation from "../NavBar";
 import logoBlack from "../../assets/img/logo-black.svg";
+import { AuthUserContext } from "../Session";
 
-function Volunteer() {
+const VolunteerBase = () => {
   return (
     <div>
       <Navigation
@@ -25,6 +26,29 @@ function Volunteer() {
       ></iframe>
     </div>
   );
-}
+};
 
-export default Volunteer;
+const NonVolunteerBase = () => {
+  return (
+    <div>
+      <Navigation
+        logo={logoBlack}
+        fontColor="#000"
+        background="#fff"
+        signUpColor="#fff"
+        signUpBackground="#437F55"
+      />
+      <div className="please-text">
+        Sign up to unlock social impact matching!
+      </div>
+    </div>
+  );
+};
+
+export default function Volunteer() {
+  return (
+    <AuthUserContext.Consumer>
+      {(authUser) => (authUser ? <VolunteerBase /> : <NonVolunteerBase />)}
+    </AuthUserContext.Consumer>
+  );
+}

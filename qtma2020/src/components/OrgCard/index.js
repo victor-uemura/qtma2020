@@ -12,6 +12,7 @@ import { connect } from "react-redux";
 import { addToCart } from "../actions/cartActions";
 import { withStyles } from "@material-ui/styles";
 import { bindActionCreators, compose } from "redux";
+import { Link } from "react-router-dom";
 
 const styles = (theme) => ({
   root: {
@@ -54,6 +55,18 @@ const styles = (theme) => ({
     width: "100%",
     fontSize: 14,
   },
+  link: {
+    fontFamily: "Circular Std",
+    borderRadius: 10,
+    height: 25,
+    width: "100%",
+    fontSize: 14,
+    textDecoration: "none",
+    textAlign: "center",
+    background: "#437f55",
+    color: "#fff",
+    paddingTop: "10px",
+  },
   row: {
     margin: "auto",
     width: "85%",
@@ -69,16 +82,50 @@ class OrgCardBase extends Component {
     super(props);
     this.state = {
       selectedOption: 10,
+      submitted: false,
     };
   }
   handleClick = (title, amount) => {
     this.props.addToCart(title, amount);
+    this.setState({ submitted: true });
   };
   handleChange = (event) => {
     this.setState({ selectedOption: event.target.value });
   };
   render() {
     const { classes } = this.props;
+    const isSubmitted = this.state.submitted;
+    let button;
+    if (isSubmitted) {
+      button = (
+        <Link
+          variant="contained"
+          disableElevation
+          className={classes.link}
+          size="small"
+          color="primary"
+          to="/cart"
+        >
+          Go to Cart
+        </Link>
+      );
+    } else {
+      button = (
+        <Button
+          variant="contained"
+          disableElevation
+          className={classes.button}
+          size="small"
+          color="primary"
+          onClick={() => {
+            this.handleClick(this.props.title, this.state.selectedOption);
+          }}
+          disabled={this.state.submitted}
+        >
+          Donate
+        </Button>
+      );
+    }
     return (
       <Card className={classes.root}>
         <CardMedia
@@ -124,18 +171,7 @@ class OrgCardBase extends Component {
               $50
             </MenuItem>
           </Select>
-          <Button
-            variant="contained"
-            disableElevation
-            className={classes.button}
-            size="small"
-            color="primary"
-            onClick={() => {
-              this.handleClick(this.props.title, this.state.selectedOption);
-            }}
-          >
-            Donate
-          </Button>
+          {button}
         </CardActions>
       </Card>
     );

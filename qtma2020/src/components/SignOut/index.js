@@ -9,7 +9,7 @@ import "./index.css";
 
 const SignOut = ({ firebase }) => (
   <div>
-    <button className="signout" to="/" onClick={firebase.signOut}>
+    <button className="signout" onClick={firebase.signOut}>
       Sign Out
     </button>
   </div>

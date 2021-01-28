@@ -120,7 +120,12 @@ class SignUpButtonBase extends Component {
           <div className="container">
             <div className="dialogRow">
               <div className="columnSml">
-                <img className="dialogImg" src="7EB9B2.png" />
+                <div className="imgandtext">
+                  <img className="dialogImg" src="7EB9B2.png" />
+                  <div className="image-text">
+                    Sign up to unlock social impact matching!
+                  </div>
+                </div>
               </div>
               <div className="columnLrg">
                 <DialogTitle style={{ padding: "0rem 2rem" }}>

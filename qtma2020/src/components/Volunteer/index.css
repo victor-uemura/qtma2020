@@ -61,3 +61,23 @@
   color: #777777;
   transform: scale(1);
 }
+
+.please-text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; /* NEW */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-start;
+  font-family: Recoleta Alt;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 38px;
+  text-align: left;
+  padding-top: 50px;
+
+  color: #000000;
+}
