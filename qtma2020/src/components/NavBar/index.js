@@ -39,14 +39,14 @@ const NavBarNonAuth = (props) => {
               Donate
             </p>
           </NavLink>
-          <NavLink to="/about" activeStyle>
+          <NavLink to="/volunteer" activeStyle>
             <p
               className="text"
               style={{
                 color: props.fontColor,
               }}
             >
-              About
+              Volunteer
             </p>
           </NavLink>
           <NavLink to="/faq" activeStyle>
@@ -129,14 +129,14 @@ const NavBarAuthBase = (props) => {
             Donate
           </p>
         </NavLink>
-        <NavLink to="/temp" activeStyle>
+        <NavLink to="/volunteer" activeStyle>
           <p
             className="text"
             style={{
               color: props.fontColor,
             }}
           >
-            About
+            Volunteer
           </p>
         </NavLink>
         <NavLink to="/faq" activeStyle>
