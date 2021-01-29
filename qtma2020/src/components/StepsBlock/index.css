@@ -29,6 +29,7 @@
   margin-top: 20px;
 }
 
+
 .step-subtitle {
   width: 100%;
   text-align: center;
@@ -41,7 +42,7 @@
 .step-number {
   width: 100%;
   text-align: center;
-  font-family: Recola Alt;
+  font-family: Recoleta Alt;
   font-size:14px;
   color: #828282;
 }
@@ -49,7 +50,7 @@
 .step-title {
   width: 100%;
   text-align: center;
-  font-family: Recola Alt;
+  font-family: Recoleta Alt;
   font-size:18px;
   color: #202020;
 }
