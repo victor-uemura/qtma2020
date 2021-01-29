@@ -8,7 +8,7 @@
   src: local("Circular Std"), url("../../assets/fonts/Circular-Std-Book.ttf");
 }
 
-.faq-body1 {
+.faq-body {
   display: flex;
   justify-content: flex-start;
   align-items: center; /* NEW */
@@ -17,7 +17,7 @@
   flex-wrap: wrap;
   align-content: center;
   justify-content: flex-start;
-  padding-top: 170px;
+  padding-top: 220px;
   padding-bottom: 150px;
   height: 100%;
   width: 100%;
@@ -60,4 +60,24 @@
 
   color: #777777;
   transform: scale(1);
+}
+
+.please-text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; /* NEW */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-start;
+  font-family: Recoleta Alt;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 38px;
+  text-align: left;
+  padding-top: 50px;
+
+  color: #000000;
 }

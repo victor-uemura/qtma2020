@@ -8,7 +8,7 @@ import { withFirebase } from "../Firebase";
 import { compose, withProps } from "recompose";
 
 const stripePromise = loadStripe(
-  "pk_test_51HnvToF7eOu1j3PWQuzMnqZj9BZRncG7KTyrxwP82ATVQA9fZTA86J8nbOeNie6U6oKjxwhY8KCGh5tktROMD4sm00xxzFvrz0"
+  "pk_live_51HnvToF7eOu1j3PWSEHlo7Z7fKil4gV1UEB3vuMXjxPLBOV7NxmzxQyf6qUvhDdD0yp0nj46RqchL5hOjGEsP3VB00oHN1bz2E"
 );
 
 const DonateButton = (props) => (
@@ -17,7 +17,7 @@ const DonateButton = (props) => (
       authUser ? (
         <DonateButtonFire authUser={authUser} addedItems={props.addedItems} />
       ) : (
-        <DonateButtonFire authUser="" />
+        <DonateButtonFire authUser="" addedItems={props.addedItems} />
       )
     }
   </AuthUserContext.Consumer>
@@ -28,7 +28,7 @@ class DonateButtonBase extends Component {
     var stripeString = "?";
     this.props.addedItems.forEach(function (item) {
       var temp = encodeURI(
-        "name=" + item.title + "&value=" + item.price * 100 + "&"
+        "name=" + item.title + "&value=" + item.amount * 100 + "&"
       );
       stripeString = stripeString.concat(temp);
     });
@@ -44,14 +44,6 @@ class DonateButtonBase extends Component {
     );
     const session = await response.json();
     // When the customer clicks on the button, redirect them to Checkout.
-    if (this.props.authUser !== "") {
-      var donations = [];
-      this.props.addedItems.forEach(function (item) {
-        var temp = { place: item.title, amount: item.price };
-        donations.push(temp);
-      });
-      this.props.firebase.addDonation(donations, this.props.authUser);
-    }
     await stripe.redirectToCheckout({
       sessionId: session.id,
     });

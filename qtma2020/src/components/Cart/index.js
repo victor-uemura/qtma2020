@@ -1,11 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import {
-  removeItem,
-  addQuantity,
-  subtractQuantity,
-} from "../actions/cartActions";
+import { removeItem } from "../actions/cartActions";
 import Recipe from "../Recipe";
 import "./index.css";
 import Navigation from "../NavBar";
@@ -13,68 +9,37 @@ import logoBlack from "../../assets/img/logo-black.svg";
 
 class Cart extends Component {
   //to remove the item completely
-  handleRemove = (id) => {
-    this.props.removeItem(id);
+  handleRemove = (title) => {
+    this.props.removeItem(title);
   };
-  //to add the quantity
-  handleAddQuantity = (id) => {
-    this.props.addQuantity(id);
-  };
-  //to substruct from the quantity
-  handleSubtractQuantity = (id) => {
-    this.props.subtractQuantity(id);
-  };
+
   render() {
     let addedItems = this.props.items.length ? (
       this.props.items.map((item) => {
         return (
-          <div>
+          <div className="item-div">
             <li className="collection-item avatar" key={item.id}>
               <div className="item-img">
-                <img src={item.img} alt={item.img} className="" />
+                <img src={item.img} alt={item.img} className="hehe" />
               </div>
 
               <div className="item-desc">
-                <span className="title">{item.title}</span>
-                <p>{item.desc}</p>
-                <p>
-                  <b>Price: {item.price}$</b>
-                </p>
-                <p>
-                  <b>Quantity: {item.quantity}</b>
-                </p>
-                <div className="add-remove">
-                  <Link to="/cart">
-                    <i
-                      className="material-icons"
-                      onClick={() => {
-                        this.handleAddQuantity(item.id);
-                      }}
-                    >
-                      arrow_drop_up
-                    </i>
-                  </Link>
-                  <Link to="/cart">
-                    <i
-                      className="material-icons"
-                      onClick={() => {
-                        this.handleSubtractQuantity(item.id);
-                      }}
-                    >
-                      arrow_drop_down
-                    </i>
-                  </Link>
-                </div>
+                <div className="item-title">{item.title}</div>
+                <p className="desc">{item.desc}</p>
+              </div>
+              <div>
+                <p className="item-amount">${item.amount}</p>
                 <button
-                  className="waves-effect waves-light btn pink remove"
+                  className="item-remove"
                   onClick={() => {
-                    this.handleRemove(item.id);
+                    this.handleRemove(item.title);
                   }}
                 >
                   Remove
                 </button>
               </div>
             </li>
+            <hr />
           </div>
         );
       })
@@ -90,12 +55,14 @@ class Cart extends Component {
           signUpColor="#fff"
           signUpBackground="#437F55"
         />
-        <div className="container">
+        <div className="cart-main">
           <div className="cart">
-            <h5>You have ordered:</h5>
-            <ul className="collection">{addedItems}</ul>
+            <div className="cart-title">Cart</div>
+            <div className="cartdonate">
+              <div className="collection">{addedItems}</div>
+              <Recipe />
+            </div>
           </div>
-          <Recipe />
         </div>
       </div>
     );
@@ -110,14 +77,8 @@ const mapStateToProps = (state) => {
 };
 const mapDispatchToProps = (dispatch) => {
   return {
-    removeItem: (id) => {
-      dispatch(removeItem(id));
-    },
-    addQuantity: (id) => {
-      dispatch(addQuantity(id));
-    },
-    subtractQuantity: (id) => {
-      dispatch(subtractQuantity(id));
+    removeItem: (title) => {
+      dispatch(removeItem(title));
     },
   };
 };

@@ -5,13 +5,14 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import { Link } from "react-router-dom";
+import "./index.css";
 
 const SignOut = ({ firebase }) => (
-  <li>
-    <Link to="/" onClick={firebase.signOut}>
-      SignOut
-    </Link>
-  </li>
+  <div>
+    <button className="signout" onClick={firebase.signOut}>
+      Sign Out
+    </button>
+  </div>
 );
 
 export default withFirebase(SignOut);

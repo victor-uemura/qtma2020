@@ -8,11 +8,15 @@ import DonateButton from "../DonateButton";
 class Recipe extends Component {
   render() {
     return (
-      <div className="container">
+      <div className="containers">
         <div className="collection">
-          <li className="collection-item">
-            <b>Total: {this.props.total} $</b>
-          </li>
+          <div className="checkout-total">
+            <b>
+              Total:
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              {this.props.total} $
+            </b>
+          </div>
         </div>
         <div className="checkout">
           {this.props.addedItems.length == 0 ? (

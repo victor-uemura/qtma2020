@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "Recoleta Alt";
+  src: local("Recoleta Alt"), url("../../assets/fonts/RecoletaAlt-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Circular Std";
+  src: local("Circular Std"), url("../../assets/fonts/Circular-Std-Book.ttf");
+}
 .box {
   display: flex;
   justify-content: space-between;
@@ -20,17 +29,103 @@
 .collection .collection-item {
   display: flex;
 }
-.collection-item.avatar .title {
-  font-size: 20px;
-  font-weight: 500;
-  color: #ee6e73;
-  display: block;
-  margin-bottom: 20px;
+
+.cartdonate {
+  background-color: #fff;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 40px;
+  padding-bottom: 40px;
+  margin-bottom: 50px;
+  margin-top: 30px;
 }
+
+.collection-item.avatar {
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+.item-div {
+  border-bottom: 2px;
+}
+
 .collection .collection-item img {
   width: 150px;
   margin-right: 25px;
 }
+.desc {
+  font-family: Circular Std;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: left;
+}
+
 .item-desc {
-  align-self: center;
+  margin-right: 20%;
+  width: 40vw;
+}
+
+.item-amount {
+  font-family: Circular Std;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: left;
+  margin-left: 4%;
+}
+
+.item-remove {
+  font-family: Circular Std;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: left;
+  color: #ee6e73;
+  outline: none;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.item-title {
+  text-align: left;
+  font-family: Recoleta Alt;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.cart-main {
+  display: flex;
+  background-color: #f9f9f9;
+  justify-content: flex-start;
+  align-items: center; /* NEW */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-start;
+}
+
+.cart-title {
+  font-family: Recoleta Alt;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 65px;
+  text-align: center;
+
+  color: #000;
+}
+
+.hehe {
+  border-radius: 20px;
 }

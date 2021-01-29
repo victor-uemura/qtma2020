@@ -39,14 +39,14 @@ const NavBarNonAuth = (props) => {
               Donate
             </p>
           </NavLink>
-          <NavLink to="/about" activeStyle>
+          <NavLink to="/volunteer" activeStyle>
             <p
               className="text"
               style={{
                 color: props.fontColor,
               }}
             >
-              About
+              Volunteer
             </p>
           </NavLink>
           <NavLink to="/faq" activeStyle>
@@ -63,6 +63,22 @@ const NavBarNonAuth = (props) => {
           {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
         </NavMenu1>
         <NavMenu2>
+          <NavLink to="/cart" activeStyle>
+            <p
+              className="text"
+              style={{
+                color: props.fontColor,
+                paddingRight: "0.5vw",
+              }}
+            >
+              Cart
+            </p>
+            {props.fontColor == "#fff" ? (
+              <NavBarIconWhite />
+            ) : (
+              <NavBarIconBlack />
+            )}
+          </NavLink>
           <NavBtn>
             <LogInDialog fontColor={props.fontColor} />
           </NavBtn>
@@ -113,14 +129,14 @@ const NavBarAuthBase = (props) => {
             Donate
           </p>
         </NavLink>
-        <NavLink to="/temp" activeStyle>
+        <NavLink to="/volunteer" activeStyle>
           <p
             className="text"
             style={{
               color: props.fontColor,
             }}
           >
-            About
+            Volunteer
           </p>
         </NavLink>
         <NavLink to="/faq" activeStyle>
