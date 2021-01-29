@@ -8,7 +8,7 @@
   src: local("Circular Std"), url("../../assets/fonts/Circular-Std-Book.ttf");
 }
 
-.faq-body {
+.faq-body1 {
   display: flex;
   justify-content: flex-start;
   align-items: center; /* NEW */
@@ -17,7 +17,7 @@
   flex-wrap: wrap;
   align-content: center;
   justify-content: flex-start;
-  padding-top: 220px;
+  padding-top: 170px;
   padding-bottom: 150px;
   height: 100%;
   width: 100%;

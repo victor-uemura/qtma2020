@@ -23,8 +23,12 @@ const Footer = () => {
         </div>
         <div className="about">
           <p className="header">About Us</p>
-          <p className="regular">Partners</p>
-          <p className="regular">How we work</p>
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <p className="regular">Partners</p>
+          </Link>
+          <Link to="/faq" style={{ textDecoration: "none" }}>
+            <p className="regular">How we work</p>
+          </Link>
         </div>
       </div>
     </div>

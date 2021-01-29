@@ -15,7 +15,7 @@ function FAQ() {
         signUpBackground="#437F55"
       />
 
-      <div className="faq-body">
+      <div className="faq-body1">
         <div className="faq-title1">
           <u>Frequently Asked Questions</u>
         </div>
