@@ -58,14 +58,7 @@ function FAQ() {
           volunteering opportunities. Specific information regarding each
           opportunity is outlined under the posting.
         </div>
-        <div className="faq-question">
-          Can I decide which organization my money goes to?
-        </div>
-        <div className="faq-answer">
-          At the moment, you can decide on the type of charity/cause (poverty,
-          shelter, etc.) your donation goes to. As Voluntera grows, we hope to
-          offer more specific donation options for the charity/cause.
-        </div>
+
         <div className="faq-question">
           What does the volunteer application process look like?
         </div>

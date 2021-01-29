@@ -61,7 +61,7 @@ function Donate() {
         "Monetary and food donations help us to nourish local families by providing groceries.",
     },
     {
-      title: "Bereaved Families of Ontario - Rotaty Club of Kingston",
+      title: "Bereaved Families of Ontario - Rotary Club of Kingston",
       img: bfo,
       location: "Kingston, Ontario",
       desc:
