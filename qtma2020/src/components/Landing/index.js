@@ -219,7 +219,7 @@ function Landing() {
             ></img>
           </div>
           <h1 className="landing-title4">
-            Sign up today and start making an impact{" "}
+            Sign up today to unlock donation and volunteer matching!{" "}
           </h1>
           <SignUpDialog fontColor="#7eb9b2" background="#fff" />
         </div>
