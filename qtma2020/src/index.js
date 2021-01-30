@@ -19,7 +19,8 @@ ReactDOM.render(
       </MediaQuery>
       <MediaQuery maxWidth={1218}>
         <h1>
-          We don't support mobile/tablets yet <br /> <br />
+          Please view on desktop in fullscreen mode! we're working on mobile and
+          tablet compatibility! <br /> <br />
           (｀･ω･´)
           <br />
           <br /> (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ <br />
