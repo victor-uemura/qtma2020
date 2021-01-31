@@ -24,6 +24,11 @@
   background: #f9f9f9;
 }
 
+.volunteer-body {
+  background: #f9f9f9;
+  padding-bottom: 120px;
+}
+
 .faq-title1 {
   font-family: Recoleta Alt;
   font-style: normal;
@@ -90,23 +95,22 @@
   font-size: 32px;
   color: #202020;
   margin-bottom: 4%;
-  margin-top: 20px;
+  padding-top: 100px;
 }
 
 .match-hours {
   font-weight: 400;
   text-align: center;
   font-family: Circular Std;
-  font-size: 14px;
+  font-size: 18px;
   color: #ffffff;
-  background-color: #437F55;
+  background-color: #437f55;
   border-radius: 50px;
-  margin-top: 10px;
-  margin-bottom: 30px;
+  margin-top: 40px;
   margin-left: 42%;
-  width: 9%; 
-  height: auto; 
-  padding: 10px 20px 10px 20px;
+  width: 15%;
+  height: auto;
+  padding: 20px 30px 20px 30px;
 }
 
 a {
@@ -115,6 +119,8 @@ a {
 a:visited {
   color: #ffffff;
 }
-a:hover, a:active, a:focus {
-  color:#ffffff;
+a:hover,
+a:active,
+a:focus {
+  color: #ffffff;
 }

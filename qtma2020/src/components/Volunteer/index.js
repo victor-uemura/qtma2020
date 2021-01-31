@@ -15,29 +15,34 @@ const VolunteerBase = () => {
         signUpColor="#fff"
         signUpBackground="#437F55"
       />
-      <div className = "volunteer-text">
-        Step 1: Choose and sign up for an opportunity below.
-      </div>
-      <iframe
-        class="airtable-embed"
-        src="https://airtable.com/embed/shrPAlELyP12UjVgX?backgroundColor=greenLight&viewControls=on"
-        frameborder="0"
-        onmousewheel=""
-        width="100%"
-        height="400px"
-        style={{ background: "transparent", border: "1px solid #ccc"}}
-      ></iframe>
+      <div className="volunteer-body">
+        <div className="volunteer-text">
+          Step 1: Choose and sign up for an opportunity below.
+        </div>
+        <iframe
+          class="airtable-embed"
+          src="https://airtable.com/embed/shrPAlELyP12UjVgX?backgroundColor=greenLight&viewControls=on"
+          frameborder="0"
+          onmousewheel=""
+          width="65%"
+          height="500px"
+          style={{ background: "transparent", border: "1px solid #ccc" }}
+        ></iframe>
 
-      <div className = "volunteer-text">
-        Step 2: Fill out this form to let us know you volunteered!
-      </div>
+        <div className="volunteer-text">
+          Step 2: Fill out this form to let us know you volunteered!
+        </div>
 
-      <div className = "match-hours" >
-        <a style={{textDecoration: 'none'}} 
-        href="https://docs.google.com/forms/d/e/1FAIpQLSdLXMMnubVGFUsmc9FMkYymkghG_tq5JmWl9r2jORyZRJKnAw/viewform?usp=sf_link" 
-        target="_blank">Match my Hours!</a>
+        <div className="match-hours">
+          <a
+            style={{ textDecoration: "none" }}
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdLXMMnubVGFUsmc9FMkYymkghG_tq5JmWl9r2jORyZRJKnAw/viewform?usp=sf_link"
+            target="_blank"
+          >
+            Match my Hours!
+          </a>
+        </div>
       </div>
-
     </div>
   );
 };

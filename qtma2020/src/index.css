@@ -114,7 +114,8 @@ a.signout-button:hover {
 .landing-body {
   display: flex;
   justify-content: flex-start;
-  height: 2900px;
+  height: 3000px;
+  padding-bottom: 100px;
 }
 
 .landing-top {
