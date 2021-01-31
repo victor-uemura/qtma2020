@@ -33,15 +33,14 @@ const VolunteerBase = () => {
           Step 2: Fill out this form to let us know you volunteered!
         </div>
 
-        <div className="match-hours">
-          <a
-            style={{ textDecoration: "none" }}
-            href="https://docs.google.com/forms/d/e/1FAIpQLSdLXMMnubVGFUsmc9FMkYymkghG_tq5JmWl9r2jORyZRJKnAw/viewform?usp=sf_link"
-            target="_blank"
-          >
-            Match my Hours!
-          </a>
-        </div>
+        <a
+          className="match-hours"
+          style={{ textDecoration: "none" }}
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdLXMMnubVGFUsmc9FMkYymkghG_tq5JmWl9r2jORyZRJKnAw/viewform?usp=sf_link"
+          target="_blank"
+        >
+          Match my Hours!
+        </a>
       </div>
     </div>
   );
