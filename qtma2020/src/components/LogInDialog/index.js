@@ -76,7 +76,7 @@ class LogInButtonBase extends Component {
           //color='#FFFFFF'
           onClick={this.handleOpen}
         >
-          Login
+          Log in
         </button>
 
         <Dialog
@@ -131,7 +131,7 @@ class LogInButtonBase extends Component {
                     </div>
                     <div className="dialogRow">
                       <p>
-                        Don't have an account? <a href="">Sign Up</a>
+                        Don't have an account? <a style={{color: '#437F55'}} href="">Sign Up</a>
                       </p>
                       <Button
                         type="submit"

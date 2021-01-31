@@ -213,7 +213,7 @@ class SignUpButtonBase extends Component {
                     </div>
                     <div className="dialogRow">
                       <p>
-                        Already have an account? <a href="">Log in</a>
+                        Already have an account? <a style={{color: '#437F55'}} href="">Log in</a>
                       </p>
                       <Button
                         disabled={isInvalid}
