@@ -81,3 +81,40 @@
 
   color: #000000;
 }
+
+.volunteer-text {
+  width: 100%;
+  margin-left: 0%;
+  text-align: center;
+  font-family: Recoleta Alt;
+  font-size: 32px;
+  color: #202020;
+  margin-bottom: 4%;
+  margin-top: 20px;
+}
+
+.match-hours {
+  font-weight: 400;
+  text-align: center;
+  font-family: Circular Std;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #437F55;
+  border-radius: 50px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  margin-left: 42%;
+  width: 9%; 
+  height: auto; 
+  padding: 10px 20px 10px 20px;
+}
+
+a {
+  color: #fffff3;
+}
+a:visited {
+  color: #ffffff;
+}
+a:hover, a:active, a:focus {
+  color:#ffffff;
+}
