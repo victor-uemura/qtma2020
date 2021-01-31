@@ -17,7 +17,6 @@ import { Link } from 'react-router-dom';
 const styles = (theme) => ({
 	root: {
 		maxWidth: 365,
-		height: '100%',
 		textAlign: 'left',
 		borderRadius: 30
 	},
@@ -33,9 +32,15 @@ const styles = (theme) => ({
 		fontFamily: 'Recoleta Alt',
 		margin: 'auto',
 		width: '95%',
-		fontSize: 16
+		fontSize: 18
 	},
 	body: {
+		margin: 'auto',
+		fontFamily: 'Circular Std',
+		width: '95%',
+		fontSize: 14
+	},
+	caption: {
 		margin: 'auto',
 		fontFamily: 'Circular Std',
 		width: '95%',
@@ -142,7 +147,7 @@ class OrgCardBase extends Component {
 						{this.props.title}
 					</Typography>
 					<Typography
-						className={classes.body}
+						className={classes.caption}
 						variant='caption'
 						color='textSecondary'
 						component='p'
