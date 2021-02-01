@@ -8,15 +8,16 @@ import cartReducer from "./components/reducers/cartReducer";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 import MediaQuery from "react-responsive";
+import MobileSignUp from "./components/MobileSignUp";
 
 const store = createStore(cartReducer);
 
 ReactDOM.render(
   <FirebaseContext.Provider value={new Firebase()}>
     <Provider store={store}>
-      <MediaQuery minWidth={1218}>
-        <App />
-      </MediaQuery>
+      {/* <MediaQuery minWidth={1218}> */}
+      <App />
+      {/* </MediaQuery>
       <MediaQuery maxWidth={1218}>
         <h1>
           Please view on desktop in fullscreen mode! we're working on mobile and
@@ -26,7 +27,8 @@ ReactDOM.render(
           <br /> (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ <br />
           <br /> ┐(︶▽︶)┌
         </h1>
-      </MediaQuery>{" "}
+        <MobileSignUp />
+      </MediaQuery>{" "} */}
     </Provider>
   </FirebaseContext.Provider>,
   document.getElementById("root")
