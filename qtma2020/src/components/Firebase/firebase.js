@@ -1,5 +1,5 @@
 import app from "firebase/app";
-import firebase from "firebase";
+import firestore from "firebase/firestore";
 import "firebase/auth";
 
 const config = {
@@ -72,7 +72,7 @@ class Firebase {
     const userRef = this.db.collection("users").doc(authUser.uid);
     donations.forEach(function (donation) {
       userRef.update({
-        donations: firebase.firestore.FieldValue.arrayUnion({
+        donations: app.firestore.FieldValue.arrayUnion({
           time: new Date(),
           place: donation.place,
           amount: donation.amount,
