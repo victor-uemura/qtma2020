@@ -126,12 +126,15 @@ class LogInButtonBase extends Component {
                     <div className="dialogRow">
                       <SignInGoogle width="30vw" />
                     </div>
-                    <div className="dialogRow">
+                    {/* <div className="dialogRow">
                       <SignInFacebook width="30vw" />
-                    </div>
+                    </div> */}
                     <div className="dialogRow">
                       <p>
-                        Don't have an account? <a style={{color: '#437F55'}} href="">Sign Up</a>
+                        Don't have an account?{" "}
+                        <a style={{ color: "#437F55" }} href="">
+                          Sign Up
+                        </a>
                       </p>
                       <Button
                         type="submit"

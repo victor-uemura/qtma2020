@@ -208,12 +208,15 @@ class SignUpButtonBase extends Component {
                     <div className="dialogRow">
                       <SignInGoogle width="47vw" />
                     </div>
-                    <div className="dialogRow">
+                    {/* <div className="dialogRow">
                       <SignInFacebook width="47vw" />
-                    </div>
+                    </div> */}
                     <div className="dialogRow">
                       <p>
-                        Already have an account? <a style={{color: '#437F55'}} href="">Log in</a>
+                        Already have an account?{" "}
+                        <a style={{ color: "#437F55" }} href="">
+                          Log in
+                        </a>
                       </p>
                       <Button
                         disabled={isInvalid}
