@@ -47,10 +47,10 @@ class Firebase {
     try {
       const doc = await (await docRef.get()).docs[0];
 
-      if (doc.exists) {
-        return doc.data();
-      } else {
+      if (!doc.exists) {
         console.log("No such document!");
+      } else {
+        return doc.data();
       }
     } catch (error) {
       console.log("Error getting document:", error);
