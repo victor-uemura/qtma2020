@@ -61,7 +61,6 @@ class PostingsBase extends Component {
         })
         this.setState({ postings: postings })
         //set state to array
-
         //console.log(snapshot);
       })
       .catch((error) => console.log(error));

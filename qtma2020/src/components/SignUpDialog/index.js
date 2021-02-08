@@ -39,7 +39,6 @@ class SignUpButtonBase extends Component {
 
   handleOpen = () => {
     this.setState({ open: true });
-    console.log(this.props);
   };
 
   handleClose = () => {
@@ -69,7 +68,6 @@ class SignUpButtonBase extends Component {
 
     event.preventDefault();
     this.handleClose();
-    console.log(this.state);
   };
 
   onChange = (event) => {
