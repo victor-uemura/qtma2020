@@ -22,7 +22,8 @@ const LogInDialog = (props) => (
 
 const INITIAL_STATE = {
 	email: '',
-	passwordOne: ''
+	passwordOne: '',
+	open: false
 };
 
 class LogInButtonBase extends Component {
