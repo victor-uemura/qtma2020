@@ -30,7 +30,7 @@ const INITIAL_STATE = {
 	email: '',
 	passwordOne: '',
 	passwordTwo: '',
-	referee: '',
+	referrer: '',
 	open: false,
 	error: null
 };
@@ -50,7 +50,13 @@ class SignUpButtonBase extends Component {
 	};
 
 	onSubmit = (event) => {
-		const { firstName, lastName, email, passwordOne, referee } = this.state;
+		const {
+			firstName,
+			lastName,
+			email,
+			passwordOne,
+			referrer
+		} = this.state;
 
 		// Add firebase auth + add user to db
 		this.props.firebase
@@ -63,7 +69,7 @@ class SignUpButtonBase extends Component {
 				return this.props.firebase.doSendEmailVerification();
 			})
 			.then((authUser) => {
-				this.props.firebase.addReferral(referee, email);
+				this.props.firebase.addReferral(referrer);
 				this.setState({ ...INITIAL_STATE });
 				this.props.history.push(ROUTES.LANDING);
 				this.handleClose();
@@ -87,7 +93,7 @@ class SignUpButtonBase extends Component {
 			email,
 			passwordOne,
 			passwordTwo,
-			referee,
+			referrer,
 			error
 		} = this.state;
 
@@ -221,7 +227,7 @@ class SignUpButtonBase extends Component {
 											InputLabelProps={{
 												shrink: true
 											}}
-											name='referee'
+											name='referrer'
 											label='Referred by a friend'
 											placeholder="Friend's email"
 											onChange={this.onChange}

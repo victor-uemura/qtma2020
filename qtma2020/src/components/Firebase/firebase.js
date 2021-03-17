@@ -82,9 +82,8 @@ class Firebase {
 		});
 	};
 
-	addReferral = (referee, referrer) => {
+	addReferral = (referrer) => {
 		const referralRef = this.db.collection('referrals').add({
-			referee,
 			referrer,
 			date: new Date()
 		});
