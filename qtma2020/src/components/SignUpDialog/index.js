@@ -222,8 +222,8 @@ class SignUpButtonBase extends Component {
 												shrink: true
 											}}
 											name='referee'
-											label='Refer a friend!'
-											placeholder="Referee's email"
+											label='Referred by a friend'
+											placeholder="Friend's email"
 											onChange={this.onChange}
 										/>
 
