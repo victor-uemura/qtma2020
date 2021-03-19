@@ -8,7 +8,7 @@ import { withFirebase } from "../Firebase";
 import { compose, withProps } from "recompose";
 
 const stripePromise = loadStripe(
-  "pk_live_51HnvToF7eOu1j3PWSEHlo7Z7fKil4gV1UEB3vuMXjxPLBOV7NxmzxQyf6qUvhDdD0yp0nj46RqchL5hOjGEsP3VB00oHN1bz2E"
+  "pk_test_51HnvToF7eOu1j3PWQuzMnqZj9BZRncG7KTyrxwP82ATVQA9fZTA86J8nbOeNie6U6oKjxwhY8KCGh5tktROMD4sm00xxzFvrz0"
 );
 
 const DonateButton = (props) => (
